@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>태백 고원 스포츠 명품도시 | Taebaek Highland Sports Excellence City</title>
+    <meta name="description" content="태백시의 미래 비전, 고원 스포츠 명품도시로의 도약을 위한 프로젝트입니다.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2C7873',
+                        secondary: '#5D4037',
+                        accent: '#FF5722',
+                        highlight: '#01579B',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* 추가 애니메이션 */
+        .animate-count {
+            animation: countUp 2s forwards;
+        }
+        
+        @keyframes countUp {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+        
+        /* 탭 아이템 효과 */
+        .tab-btn.active {
+            color: #2C7873;
+            border-bottom: 3px solid #FF5722;
+        }
+
+        /* 개선방안 섹션 상단 메뉴 간격 */
+        .improvement-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        .improvement-menu-item {
+            padding: 10px 20px;
+            margin: 0 5px 10px;
+            border-radius: 4px;
+            background-color: #f5f5f5;
+            transition: all 0.3s ease;
+        }
+        
+        .improvement-menu-item:hover, .improvement-menu-item.active {
+            background-color: #2C7873;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- 헤더 -->
+    <header class="bg-primary text-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold">태백 고원 스포츠 명품도시</a>
+            <nav>
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="#vision" class="hover:text-accent transition-colors">비전 소개</a></li>
+                    <li><a href="#improvement" class="hover:text-accent transition-colors">개선방안</a></li>
+                    <li><a href="#projects" class="hover:text-accent transition-colors">핵심 프로젝트</a></li>
+                    <li><a href="#effects" class="hover:text-accent transition-colors">기대효과</a></li>
+                    <li><a href="benchmark.html" class="hover:text-accent transition-colors">벤치마크 사례</a></li>
+                </ul>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 모바일 메뉴 -->
+        <div id="mobile-menu" class="hidden bg-primary shadow-md md:hidden">
+            <ul class="flex flex-col p-4 space-y-3">
+                <li><a href="#vision" class="block hover:text-accent transition-colors">비전 소개</a></li>
+                <li><a href="#improvement" class="block hover:text-accent transition-colors">개선방안</a></li>
+                <li><a href="#projects" class="block hover:text-accent transition-colors">핵심 프로젝트</a></li>
+                <li><a href="#effects" class="block hover:text-accent transition-colors">기대효과</a></li>
+                <li><a href="benchmark.html" class="block hover:text-accent transition-colors">벤치마크 사례</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 히어로 섹션 -->
+    <section class="relative h-screen flex items-center bg-gradient-to-br from-primary to-highlight">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="container mx-auto px-4 z-10">
+            <div class="max-w-3xl mx-auto text-center text-white">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in">태백 고원 스포츠 명품도시</h1>
+                <h2 class="text-2xl md:text-3xl font-medium mb-6 animate-fade-in" style="animation-delay: 0.2s;">Taebaek Highland Sports Excellence City</h2>
+                <p class="text-xl mb-8 animate-fade-in" style="animation-delay: 0.4s;">자연과 스포츠가 공존하는 미래의 태백</p>
+                <a href="#vision" class="inline-block bg-white text-primary px-6 py-3 rounded-full font-medium hover:bg-accent hover:text-white transition-colors animate-fade-in" style="animation-delay: 0.6s;">비전 살펴보기</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 비전 소개 섹션 -->
+    <section id="vision" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">비전 소개</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">태백시의 현재와 미래를 연결하는 새로운 도약</p>
+                <div class="w-24 h-1 bg-accent mx-auto mt-4"></div>
+            </div>
+            
+            <div class="flex flex-wrap items-center">
+                <div class="w-full lg:w-1/2 mb-10 lg:mb-0 pr-0 lg:pr-12">
+                    <h3 class="text-2xl md:text-3xl font-bold text-secondary mb-6">국내 유일의 고원도시, 태백</h3>
+                    <p class="text-lg mb-6">해발 800-1,400m의 고원지대에 위치한 태백시는 청정한 자연환경과 풍부한 산림자원을 갖추고 있습니다. 석탄산업 쇠퇴 이후 새로운 성장 동력이 필요한 태백시는 이제 고원 스포츠 명품도시로 거듭납니다.</p>
+                    <p class="text-lg mb-6">태백 고원 스포츠 명품도시는 태백시만의 고유한 자원을 활용하여 사계절 스포츠 관광의 중심지로 발전하는 미래 비전입니다.</p>
+                    <div class="flex items-center mt-8">
+                        <a href="benchmark.html" class="flex items-center text-accent font-medium hover:underline">
+                            해외 벤치마크 사례 보기
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-gray-50 rounded-lg shadow-md p-6 text-center transform transition-transform hover:scale-105">
+                            <div class="text-5xl font-bold text-primary mb-2" id="stat1">0</div>
+                            <div class="text-gray-600">고원 평균 고도(m)</div>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg shadow-md p-6 text-center transform transition-transform hover:scale-105">
+                            <div class="text-5xl font-bold text-primary mb-2" id="stat2">0</div>
+                            <div class="text-gray-600">산림 비율(%)</div>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg shadow-md p-6 text-center transform transition-transform hover:scale-105">
+                            <div class="text-5xl font-bold text-primary mb-2" id="stat3">0</div>
+                            <div class="text-gray-600">2030 목표 방문객(만명)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 개선방안 섹션 -->
+    <section id="improvement" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">개선방안</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">태백시의 도약을 위한 5가지 핵심 전략</p>
+                <div class="w-24 h-1 bg-accent mx-auto mt-4"></div>
+            </div>
+            
+            <!-- 개선방안 상단 메뉴 (새로 추가) -->
+            <div class="improvement-menu mb-12">
+                <a href="#training-center" class="improvement-menu-item font-medium active">고원 트레이닝 센터</a>
+                <a href="#mountain-sports" class="improvement-menu-item font-medium">사계절 산악스포츠 벨트</a>
+                <a href="#tourism-infra" class="improvement-menu-item font-medium">고원 스포츠 관광 인프라</a>
+                <a href="#sports-content" class="improvement-menu-item font-medium">스포츠 융합 콘텐츠</a>
+                <a href="#operation-strategy" class="improvement-menu-item font-medium">운영 및 추진 전략</a>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <!-- 고원 트레이닝 센터 -->
+                <div id="training-center" class="mb-20">
+                    <div class="flex flex-wrap">
+                        <div class="w-full lg:w-1/2 pr-0 lg:pr-8 mb-8 lg:mb-0">
+                            <h3 class="text-2xl font-bold text-primary mb-4">고원 트레이닝 센터</h3>
+                            <p class="mb-6">국내 유일의 고지대 전문 훈련 시설을 통해 엘리트 선수와 일반인 모두를 위한 고지대 트레이닝 환경을 제공합니다.</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>태백 고지대 스포츠 과학센터 구축</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>고원 스포츠의학센터 설립</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>고원 웰니스 훈련캠프 조성</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w-full lg:w-1/2">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                                <div class="h-64 bg-primary flex items-center justify-center">
+                                    <i class="fas fa-dumbbell text-white text-6xl"></i>
+                                </div>
+                                <div class="p-6">
+                                    <h4 class="text-xl font-bold mb-2">핵심 기대효과</h4>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-arrow-right text-accent mt-1 mr-2"></i>
+                                            <span>국내외 엘리트 선수단 연간 100개팀 이상 유치</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-arrow-right text-accent mt-1 mr-2"></i>
+                                            <span>스포츠 의학 및 과학 분야 일자리 100개 이상 창출</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-arrow-right text-accent mt-1 mr-2"></i>
+                                            <span>체류형 건강증진 관광객 연간 5,000명 이상 유치</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 사계절 산악스포츠 벨트 -->
+                <div id="mountain-sports" class="mb-20">
+                    <div class="flex flex-wrap">
+                        <div class="w-full lg:w-1/2 pr-0 lg:pr-8 mb-8 lg:mb-0">
+                            <h3 class="text-2xl font-bold text-primary mb-4">사계절 산악스포츠 벨트</h3>
+                            <p class="mb-6">태백의 산악환경을 활용한 다양한 스포츠 인프라를 구축하여 계절에 상관없이 즐길 수 있는 스포츠 환경을 조성합니다.</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>국제 트레일러닝 네트워크 구축</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>산악자전거(MTB) 특화지구 개발</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>암벽등반 및 스포츠클라이밍 허브 조성</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w-full lg:w-1/2">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                                <div class="h-64 bg-highlight flex items-center justify-center">
+                                    <i class="fas fa-hiking text-white text-6xl"></i>
+                                </div>
+                                <div class="p-6">
+                                    <h4 class="text-xl font-bold mb-2">핵심 기대효과</h4>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-arrow-right text-accent mt-1 mr-2"></i>
+                                            <span>비수기(4-11월) 방문객 비중 65%로 확대</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-arrow-right text-accent mt-1 mr-2"></i>
+                                            <span>국제 대회 연간 5개 이상 유치</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-arrow-right text-accent mt-1 mr-2"></i>
+                                            <span>아웃도어 스포츠 참여 관광객 연간 10만명 이상 유치</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 고원 스포츠 관광 인프라 -->
+                <div id="tourism-infra" class="mb-20">
+                    <div class="flex flex-wrap">
+                        <div class="w-full lg:w-1/2 pr-0 lg:pr-8 mb-8 lg:mb-0">
+                            <h3 class="text-2xl font-bold text-primary mb-4">고원 스포츠 관광 인프라</h3>
+                            <p class="mb-6">방문객들에게 편리하고 통합된 경험을 제공하기 위한 스포츠 관광 인프라를 구축합니다.</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>태백 통합 스포츠 패스 시스템 구축</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>액티브 스테이션 네트워크 구축</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>친환경 산악 모빌리티 시스템 도입</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w-full lg:w-1/2">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                                <div class="h-64 bg-secondary flex items-center justify-center">
+                                    <i class="fas fa-bus-alt text-white text-6xl"></i>
+                                </div>
+                                <div class="p-6">
+                                    <h4 class="text-xl font-bold mb-2">핵심 기대효과</h4>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-arrow-right text-accent mt-1 mr-2"></i>
+                                            <span>평균 체류시간 2.5일로 연장 (108% 증가)</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-arrow-right text-accent mt-1 mr-2"></i>
+                                            <span>친환경 교통수단 이용 증가로 연간 CO₂ 1,200톤 감축</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-arrow-right text-accent mt-1 mr-2"></i>
+                                            <span>관광객 1인당 지출액 25만원으로 증가 (79% 상승)</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 스포츠 융합 콘텐츠 -->
+                <div id="sports-content" class="mb-20">
+                    <div class="flex flex-wrap">
+                        <div class="w-full lg:w-1/2 pr-0 lg:pr-8 mb-8 lg:mb-0">
+                            <h3 class="text-2xl font-bold text-primary mb-4">스포츠 융합 콘텐츠</h3>
+                            <p class="mb-6">스포츠를 중심으로 다양한 콘텐츠를 융합하여 태백만의 특색 있는 경험을 제공합니다.</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>태백 고원 스포츠 페스티벌 시리즈</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>고원 스포츠테크 융합 허브 구축</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>산업유산-스포츠 융합 프로그램</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w-full lg:w-1/2">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                                <div class="h-64 bg-accent flex items-center justify-center">
+                                    <i class="fas fa-film text-white text-6xl"></i>
+                                </div>
+                                <div class="p-6">
+                                    <h4 class="text-xl font-bold mb-2">핵심 기대효과</h4>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-arrow-right text-accent mt-1 mr-2"></i>
+                                            <span>스포츠테크 스타트업 40개 이상 육성</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-arrow-right text-accent mt-1 mr-2"></i>
+                                            <span>국제 미디어 노출 연간 300회 이상 달성</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-arrow-right text-accent mt-1 mr-2"></i>
+                                            <span>지역 브랜드 상품 매출 연간 100억원 이상 창출</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 운영 및 추진 전략 -->
+                <div id="operation-strategy">
+                    <div class="flex flex-wrap">
+                        <div class="w-full lg:w-1/2 pr-0 lg:pr-8 mb-8 lg:mb-0">
+                            <h3 class="text-2xl font-bold text-primary mb-4">운영 및 추진 전략</h3>
+                            <p class="mb-6">프로젝트의 성공적인 실행과 지속가능한 운영을 위한 전략을 수립합니다.</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>거버넌스 및 조직 체계</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>마케팅 및 브랜딩 전략</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>단계별 추진 계획</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                    <span>재원 조달 및 운영 모델</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w-full lg:w-1/2">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                                <div class="h-64 bg-gray-700 flex items-center justify-center">
+                                    <i class="fas fa-cogs text-white text-6xl"></i>
+                                </div>
+                                <div class="p-6">
+                                    <h4 class="text-xl font-bold mb-2">추진 체계</h4>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-arrow-right text-accent mt-1 mr-2"></i>
+                                            <span>태백 고원스포츠진흥원 설립 (재단법인)</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-arrow-right text-accent mt-1 mr-2"></i>
+                                            <span>총투자비 1,405억원 (국비 40%, 지방비 34%, 민간 26%)</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-arrow-right text-accent mt-1 mr-2"></i>
+                                            <span>5년 후 운영비 자체 충당률 85% 이상 달성</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- 핵심 프로젝트 섹션 -->
+<section id="projects" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">핵심 프로젝트 하이라이트</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">태백시의 미래를 바꿀 혁신적인 프로젝트</p>
+            <div class="w-24 h-1 bg-accent mx-auto mt-4"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg gap-8">
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+<div class="h-48 bg-primary flex items-center justify-center">
+<i class="fas fa-dumbbell text-white text-5xl"></i>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-primary mb-3">태백 고지대 스포츠 과학센터</h3>
+<p class="text-gray-600 mb-4">해발 1,400m 고지대에 위치한 과학 기반 전문 훈련 시설</p>
+<a href="#" class="project-link inline-block text-accent font-medium hover:underline" data-project="project1">자세히 보기</a>
+</div>
+</div>
+        <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+            <div class="h-48 bg-highlight flex items-center justify-center">
+                <i class="fas fa-running text-white text-5xl"></i>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-primary mb-3">국제 트레일러닝 네트워크</h3>
+                <p class="text-gray-600 mb-4">ITRA 인증 국제 수준의 트레일러닝 코스 개발</p>
+                <a href="#" class="project-link inline-block text-accent font-medium hover:underline" data-project="project2">자세히 보기</a>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+            <div class="h-48 bg-secondary flex items-center justify-center">
+                <i class="fas fa-bicycle text-white text-5xl"></i>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-primary mb-3">산악자전거 특화지구</h3>
+                <p class="text-gray-600 mb-4">다양한 난이도의 MTB 코스와 편의시설 구축</p>
+                <a href="#" class="project-link inline-block text-accent font-medium hover:underline" data-project="project3">자세히 보기</a>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+            <div class="h-48 bg-accent flex items-center justify-center">
+                <i class="fas fa-mountain text-white text-5xl"></i>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-primary mb-3">탄광 어드벤처 코스</h3>
+                <p class="text-gray-600 mb-4">폐광 시설을 활용한 독특한 스포츠 체험 공간</p>
+                <a href="#" class="project-link inline-block text-accent font-medium hover:underline" data-project="project4">자세히 보기</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="text-center mt-12">
+        <a href="benchmark.html" class="inline-block bg-primary text-white px-8 py-4 rounded-full font-medium hover:bg-accent transition-colors">
+            해외 벤치마크 사례 살펴보기
+            <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+    </div>
+</div>
+</section>
+<!-- 기대효과 섹션 -->
+<section id="effects" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">기대효과</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">태백 고원 스포츠 명품도시가 가져올 변화</p>
+            <div class="w-24 h-1 bg-accent mx-auto mt-4"></div>
+        </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white rounded-lg shadow-md p-8 transition-transform hover:scale-105">
+            <div class="text-5xl text-accent mb-6">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-primary mb-4">경제적 효과</h3>
+            <ul class="space-y-3">
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                    <span>방문객 50% 증가 (180만 명)</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                    <span>체류시간 2배 이상 연장 (2.5일)</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                    <span>1,940개 일자리 창출</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                    <span>GRDP 15% 성장</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md p-8 transition-transform hover:scale-105">
+            <div class="text-5xl text-accent mb-6">
+                <i class="fas fa-users"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-primary mb-4">사회적 효과</h3>
+            <ul class="space-y-3">
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                    <span>인구 순유입 달성</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                    <span>청년층 비율 증가 (22%)</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                    <span>지역 자긍심 향상</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                    <span>주민 생활만족도 30% 향상</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md p-8 transition-transform hover:scale-105">
+            <div class="text-5xl text-accent mb-6">
+                <i class="fas fa-leaf"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-primary mb-4">환경적 효과</h3>
+            <ul class="space-y-3">
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                    <span>재생에너지 사용 50% 달성</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                    <span>연간 CO₂ 3,000톤 감축</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                    <span>생태 복원 지역 30만㎡ 확보</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                    <span>친환경 관광 모델 확립</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md p-8 transition-transform hover:scale-105">
+            <div class="text-5xl text-accent mb-6">
+                <i class="fas fa-star"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-primary mb-4">브랜드 가치 증대</h3>
+            <ul class="space-y-3">
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                    <span>국내 스포츠 관광지 Top 5 진입</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                    <span>국제 인지도 7배 증가</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                    <span>지역 브랜드 가치 300억원 창출</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                    <span>국가 스포츠 경쟁력 강화</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</section>
+<!-- 타임라인 섹션 -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">추진 타임라인</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">2025년부터 2030년까지의 단계별 계획</p>
+            <div class="w-24 h-1 bg-accent mx-auto mt-4"></div>
+        </div>
+    <div class="max-w-4xl mx-auto relative">
+        <!-- 중앙선 -->
+        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-primary transform -translate-x-1/2"></div>
+        
+        <!-- 타임라인 항목 1 -->
+        <div class="relative flex flex-col md:flex-row mb-16 items-center md:items-start">
+            <div class="order-1 md:w-1/2 md:pr-8 md:text-right">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-primary mb-3">기반 구축기 (2025-2026)</h3>
+                    <p class="text-gray-600">핵심 인프라 구축 및 기본 체계 마련, 첫 번째 페스티벌 개최</p>
+                    <ul class="mt-4 space-y-2 md:text-right">
+                        <li>태백 고원스포츠진흥원 설립</li>
+                        <li>고지대 스포츠 과학센터 1차 개발</li>
+                        <li>통합 스포츠 패스 시스템 구축</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="order-0 md:order-1 md:w-1/2 md:pl-8 mt-8 md:mt-0">
+                <div class="hidden md:block"></div>
+            </div>
+            <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+                <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold shadow-md z-10">1</div>
+            </div>
+        </div>
+        
+        <!-- 타임라인 항목 2 -->
+        <div class="relative flex flex-col md:flex-row mb-16 items-center md:items-start">
+            <div class="order-1 md:order-0 md:w-1/2 md:pr-8 mt-8 md:mt-0">
+                <div class="bg-white p-6 rounded-lg shadow-md md:text-right">
+                    <h3 class="text-2xl font-bold text-highlight mb-3">성장 확대기 (2027-2028)</h3>
+                    <p class="text-gray-600">인프라 확장 및 국제 대회 유치, 글로벌 마케팅 강화</p>
+                    <ul class="mt-4 space-y-2 md:text-right">
+                        <li>고원 스포츠의학센터 구축 및 운영</li>
+                        <li>MTB 특화지구, 클라이밍 센터 완공</li>
+                        <li>국제대회 유치 및 글로벌 마케팅 강화</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="order-0 md:order-1 md:w-1/2 md:pl-8">
+                <div class="hidden md:block"></div>
+            </div>
+            <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+                <div class="bg-highlight text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold shadow-md z-10">2</div>
+            </div>
+        </div>
+        
+        <!-- 타임라인 항목 3 -->
+        <div class="relative flex flex-col md:flex-row items-center md:items-start">
+            <div class="order-1 md:w-1/2 md:pr-8 md:text-right">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-secondary mb-3">글로벌 도약기 (2029-2030)</h3>
+                    <p class="text-gray-600">국제 스포츠 메카로 확립, 지속가능한 운영체계 안정화</p>
+                    <ul class="mt-4 space-y-2 md:text-right">
+                        <li>고원 웰니스 훈련캠프 완공 및 운영</li>
+                        <li>스포츠테크 융합 허브 구축</li>
+                        <li>국제 메가 이벤트 유치</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="order-0 md:order-1 md:w-1/2 md:pl-8 mt-8 md:mt-0">
+                <div class="hidden md:block"></div>
+            </div>
+            <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+                <div class="bg-secondary text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold shadow-md z-10">3</div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- 갤러리 섹션 -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">태백의 아름다움</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">자연과 스포츠가 어우러진 태백의 모습</p>
+            <div class="w-24 h-1 bg-accent mx-auto mt-4"></div>
+        </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="h-64 bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+            <div class="w-full h-full bg-primary flex flex-col items-center justify-center p-4 text-white">
+                <i class="fas fa-mountain text-5xl mb-4"></i>
+                <div class="text-center">
+                    <h3 class="text-xl font-bold mb-2">태백의 산악 풍경</h3>
+                    <p class="text-sm">해발 800-1,400m의 고원지대 전경</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="h-64 bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+            <div class="w-full h-full bg-highlight flex flex-col items-center justify-center p-4 text-white">
+                <i class="fas fa-running text-5xl mb-4"></i>
+                <div class="text-center">
+                    <h3 class="text-xl font-bold mb-2">트레일러닝 활동</h3>
+                    <p class="text-sm">국제 인증 트레일에서의 러닝</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="h-64 bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+            <div class="w-full h-full bg-secondary flex flex-col items-center justify-center p-4 text-white">
+                <i class="fas fa-bicycle text-5xl mb-4"></i>
+                <div class="text-center">
+                    <h3 class="text-xl font-bold mb-2">MTB 라이딩</h3>
+                    <p class="text-sm">다양한 난이도의 산악자전거 코스</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="h-64 bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+            <div class="w-full h-full bg-accent flex flex-col items-center justify-center p-4 text-white">
+                <i class="fas fa-hand-rock text-5xl mb-4"></i>
+                <div class="text-center">
+                    <h3 class="text-xl font-bold mb-2">암벽등반</h3>
+                    <p class="text-sm">실내외 클라이밍 시설</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="h-64 bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+            <div class="w-full h-full bg-gray-700 flex flex-col items-center justify-center p-4 text-white">
+                <i class="fas fa-skiing text-5xl mb-4"></i>
+                <div class="text-center">
+                    <h3 class="text-xl font-bold mb-2">스키 활동</h3>
+                    <p class="text-sm">하이원 리조트의 겨울 스포츠</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="h-64 bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+            <div class="w-full h-full bg-primary flex flex-col items-center justify-center p-4 text-white">
+                <i class="fas fa-city text-5xl mb-4"></i>
+                <div class="text-center">
+                    <h3 class="text-xl font-bold mb-2">태백 도시 전경</h3>
+                    <p class="text-sm">자연과 도시의 조화로운 모습</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- 연락처 섹션 -->
+<section id="contact" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">연락처</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">태백 고원 스포츠 명품도시에 대한 문의</p>
+            <div class="w-24 h-1 bg-accent mx-auto mt-4"></div>
+        </div>
+    <div class="flex flex-wrap -mx-4">
+        <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 text-center">
+                    <div class="text-3xl text-primary mb-4">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">주소</h3>
+                    <p class="text-gray-600">강원특별자치도 태백시 태백로 994 (황지동)</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 text-center">
+                    <div class="text-3xl text-primary mb-4">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">전화</h3>
+                    <p class="text-gray-600">033-550-2011</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 text-center">
+                    <div class="text-3xl text-primary mb-4">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">이메일</h3>
+                    <p class="text-gray-600">jwbk8911@korea.kr</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-gray-50 rounded-lg shadow-md p-8">
+                <h3 class="text-2xl font-bold text-primary mb-6">공모전 정보</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-calendar-alt text-accent mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-bold">접수기간</span>: 2025.4.1(화) ~ 4.30(수)
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-users text-accent mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-bold">참가대상</span>: 전 국민 (1인 1제안)
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-trophy text-accent mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-bold">시상내역</span>: 금상(200만원), 은상(150만원), 동상(100만원) 등
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-info-circle text-accent mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-bold">문의처</span>: 태백시청 기획감사실 기획팀 (☎033-550-2011)
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="w-full lg:w-1/2 px-4">
+            <div class="bg-gray-50 rounded-lg shadow-md p-8">
+                <h3 class="text-2xl font-bold text-primary mb-6">문의하기</h3>
+                <form>
+                    <div class="mb-6">
+                        <label for="name" class="block text-gray-700 mb-2">이름</label>
+                        <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="email" class="block text-gray-700 mb-2">이메일</label>
+                        <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="subject" class="block text-gray-700 mb-2">제목</label>
+                        <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 mb-2">메시지</label>
+                        <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-accent transition-colors">
+                        보내기
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- 푸터 -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-between mb-8">
+            <div class="w-full md:w-1/3 mb-8 md:mb-0">
+                <h2 class="text-2xl font-bold mb-4">태백 고원 스포츠 명품도시</h2>
+                <p class="text-gray-400 mb-4">자연과 스포츠가 공존하는 미래의 태백</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+<div class="w-full md:w-1/3 mb-8 md:mb-0">
+            <h3 class="text-xl font-bold mb-4">주요 링크</h3>
+            <ul class="space-y-2">
+                <li><a href="#vision" class="text-gray-400 hover:text-white transition-colors">비전 소개</a></li>
+                <li><a href="#improvement" class="text-gray-400 hover:text-white transition-colors">개선방안</a></li>
+                <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors">핵심 프로젝트</a></li>
+                <li><a href="#effects" class="text-gray-400 hover:text-white transition-colors">기대효과</a></li>
+                <li><a href="benchmark.html" class="text-gray-400 hover:text-white transition-colors">벤치마크 사례</a></li>
+            </ul>
+        </div>
+        
+        <div class="w-full md:w-1/3">
+            <h3 class="text-xl font-bold mb-4">연락처</h3>
+            <ul class="space-y-3">
+                <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt text-accent mt-1 mr-3"></i>
+                        <span class="text-gray-400">강원특별자치도 태백시 태백로 994 (황지동)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-phone text-accent mt-1 mr-3"></i>
+                        <span class="text-gray-400">033-550-2011</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-envelope text-accent mt-1 mr-3"></i>
+                        <span class="text-gray-400">jwbk8911@korea.kr</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="pt-8 border-t border-gray-800 text-center text-gray-500">
+            <p>&copy; 2025 태백 고원 스포츠 명품도시. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- 모달 -->
+<div id="projectModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden flex items-center justify-center">
+    <div class="bg-white rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
+        <div class="relative">
+            <button id="closeModal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            
+            <div class="p-8">
+                <h2 id="modalTitle" class="text-3xl font-bold text-primary mb-6">프로젝트 제목</h2>
+                
+                <div class="flex flex-wrap -mx-4">
+                    <div class="w-full lg:w-1/3 px-4 mb-8 lg:mb-0">
+                        <div class="bg-primary h-48 rounded-lg flex items-center justify-center">
+                            <i id="modalIcon" class="fas fa-project-diagram text-white text-6xl"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full lg:w-2/3 px-4">
+                        <h3 class="text-xl font-bold text-gray-700 mb-4">프로젝트 개요</h3>
+                        <p id="modalDescription" class="text-gray-600 mb-6">프로젝트 설명이 여기에 표시됩니다.</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div>
+                                <h4 class="font-bold text-primary mb-2">위치 및 규모</h4>
+                                <p id="modalLocation" class="text-gray-600">위치 및 규모 정보</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-bold text-primary mb-2">예상 투자비</h4>
+                                <p id="modalBudget" class="text-gray-600">예산 정보</p>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-bold text-primary mb-2">핵심 시설</h4>
+                                <ul id="modalFacilities" class="text-gray-600 list-disc pl-5 space-y-1">
+                                    <!-- 동적으로 추가됩니다 -->
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-bold text-primary mb-2">기대 효과</h4>
+                                <ul id="modalEffects" class="text-gray-600 list-disc pl-5 space-y-1">
+                                    <!-- 동적으로 추가됩니다 -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <h3 class="text-xl font-bold text-gray-700 mb-4">추진 일정</h3>
+                    <div id="modalTimeline" class="pl-6 border-l-2 border-primary space-y-4">
+                        <!-- 동적으로 추가됩니다 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+    // 모바일 메뉴 토글
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    });
+    
+    // 스크롤 시 헤더 스타일 변경
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.classList.add('bg-white', 'text-gray-900', 'shadow-md');
+            header.classList.remove('bg-primary', 'text-white');
+        } else {
+            header.classList.add('bg-primary', 'text-white');
+            header.classList.remove('bg-white', 'text-gray-900');
+        }
+    });
+    
+    // 통계 카운트 애니메이션
+    function animateCounters() {
+        const counters = [
+            { id: 'stat1', target: 800 },
+            { id: 'stat2', target: 87 },
+            { id: 'stat3', target: 180 }
+        ];
+        
+        counters.forEach(counter => {
+            const el = document.getElementById(counter.id);
+            if (!el) return;
+            
+            let current = 0;
+            const increment = counter.target / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= counter.target) {
+                    current = counter.target;
+                    clearInterval(timer);
+                }
+                el.textContent = Math.floor(current);
+            }, 30);
+        });
+    }
+    
+    // 스크롤 이벤트에 카운터 애니메이션 연결
+    let countersAnimated = false;
+    window.addEventListener('scroll', function() {
+        const statSection = document.getElementById('vision');
+        if (statSection && !countersAnimated) {
+            const sectionTop = statSection.getBoundingClientRect().top;
+            if (sectionTop < window.innerHeight * 0.75) {
+                animateCounters();
+                countersAnimated = true;
+            }
+        }
+    });
+    
+    // 페이지 로드 시 카운터 애니메이션 실행 (이미 섹션이 보이는 경우)
+    window.addEventListener('load', function() {
+        const statSection = document.getElementById('vision');
+        if (statSection) {
+            const sectionTop = statSection.getBoundingClientRect().top;
+            if (sectionTop < window.innerHeight * 0.75) {
+                animateCounters();
+                countersAnimated = true;
+            }
+        }
+    });
+    
+    // 개선방안 상단 메뉴 활성화 처리
+    const improvementMenuItems = document.querySelectorAll('.improvement-menu-item');
+    
+    improvementMenuItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // 모든 메뉴 항목 비활성화
+            improvementMenuItems.forEach(menuItem => {
+                menuItem.classList.remove('active');
+            });
+            
+            // 클릭한 메뉴 항목 활성화
+            this.classList.add('active');
+            
+            // 해당 섹션으로 스크롤
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // 프로젝트 모달
+    const projectLinks = document.querySelectorAll('.project-link');
+    const modal = document.getElementById('projectModal');
+    const closeModal = document.getElementById('closeModal');
+    
+    // 프로젝트 데이터
+    const projectData = {
+        'project1': {
+            title: '태백 고지대 스포츠 과학센터',
+            icon: 'fas fa-dumbbell',
+            description: '해발 800-1,400m의 고원지대에 위치한 국내 유일의 전문 고지대 트레이닝 시설로, 국가대표 및 프로팀의 고지대 훈련을 지원하는 동시에 일반인을 위한 건강증진 프로그램을 제공합니다.',
+            location: '하이원 리조트 인근 부지, 연면적 15,000㎡ 규모',
+            budget: '초기 시설 구축 250억원, 연간 운영비 25억원',
+            facilities: [
+                '저산소 훈련실(3종): 해발 2,000m/2,500m/3,000m 시뮬레이션 환경',
+                '생리학 테스트랩: VO2max, 젖산역치, 근력분석 등 종합검사시설',
+                '실내 육상 트랙: 200m 실내 트랙, 스마트 페이싱 시스템',
+                '멀티스포츠 훈련장: 배구, 농구, 핸드볼 등 실내 종목 훈련 공간',
+                '생체역학 분석실: 3D 동작분석, 지면반력 측정, 파워분석 시스템'
+            ],
+            effects: [
+                '국가대표/프로팀 전용 훈련기간: 연간 200일 이상 확보',
+                '국내외 전문팀 100개 이상, 연인원 5,000명 이상 유치',
+                '스포츠 의학 및 과학 분야 일자리 100개 이상 창출',
+                '건강증진 관광 활성화로 연간 방문객 3만명 이상 유치'
+            ],
+            timeline: [
+                { year: '2025 하반기', event: '기본계획 수립 및 설계 완료' },
+                { year: '2026 상반기', event: '1차 시설 착공 및 운영 조직 구성' },
+                { year: '2026 하반기', event: '1차 시설 개관 및 시범 운영' },
+                { year: '2027 상반기', event: '전체 시설 완공 및 정식 운영' }
+            ]
+        },
+        'project2': {
+            title: '국제 트레일러닝 네트워크',
+            icon: 'fas fa-running',
+            description: '태백의 산악 지형을 활용한 국제 수준의 트레일러닝 코스를 개발하여 ITRA(국제 트레일러닝 협회) 인증을 획득하고, 국내외 대회를 유치하는 프로젝트입니다.',
+            location: '태백산, 함백산 일원, 총 연장 170km 이상의 코스 네트워크',
+            budget: '초기 인프라 구축 70억원, 연간 유지보수 및 대회운영 15억원',
+            facilities: [
+                'ITRA 인증 코스 3종: 블루(20km), 레드(50km), 블랙(100km) 코스',
+                '특화 요소: 탄광 갱도 통과 구간, 고산 습지, 폭포 트레일 등',
+                '안전시설: 5km마다 응급지원소, 위치추적 시스템, 무선통신망',
+                '편의시설: 20개 급수/보급소, 10개 휴게쉼터, 5개 전망대',
+                '스마트 트레일: GPS 맵핑, AR 내비게이션, 실시간 기상정보'
+            ],
+            effects: [
+                '연례 대회: 태백 울트라 트레일 챌린지(5월), 고원 트레일 페스티벌(10월)',
+                'UTMB 월드시리즈 아시아 거점 확보로 국제 인지도 상승',
+                '비수기(4-11월) 방문객 증가로 계절 편중성 해소',
+                '연간 트레일러닝 참가자 15,000명 이상 유치'
+            ],
+            timeline: [
+                { year: '2025 하반기', event: '마스터플랜 수립 및 코스 설계' },
+                { year: '2026 상반기', event: '블루코스(20km) 개발 및 시범 운영' },
+                { year: '2026 하반기', event: '첫 국내 대회 개최 및 ITRA 인증 획득' },
+                { year: '2027 상반기', event: '전체 코스 네트워크 완성' },
+                { year: '2027 하반기', event: '국제 대회 유치' }
+            ]
+        },
+        'project3': {
+            title: '산악자전거 특화지구',
+            icon: 'fas fa-bicycle',
+            description: '다양한 난이도의 MTB 코스와 편의시설을 구축하여 국내 최고의 산악자전거 목적지로 발전시키는 프로젝트입니다. 계절에 상관없이 즐길 수 있는 지속가능한 MTB 문화를 조성합니다.',
+            location: '하이원 리조트 일원 및 폐광지역, 총 면적 약 500,000㎡',
+            budget: '초기 조성 110억원, 연간 운영 10억원',
+            facilities: [
+                '다운힐 코스(3개): 초급(3km), 중급(5km), 고급(7km)',
+                '크로스컨트리 코스(5개): 총 연장 120km, 난이도별 구분',
+                '펌프트랙/스킬파크: 초보자 교육용 5,000㎡ 규모 시설',
+                '폐광지 익스트림 코스: 폐광 시설 활용 어드벤처 코스',
+                '바이크 스테이션 4개소: 대여, 수리, 세척, 보관 서비스'
+            ],
+            effects: [
+                '태백 MTB 페스티벌(7월) 아시아 MTB 시리즈 공식 대회화',
+                'MTB 관련 일자리 150개 이상 창출',
+                '연간 MTB 이용객 50,000명 이상 유치',
+                '겨울철 팻바이크 프로그램으로 사계절 운영체계 구축'
+            ],
+            timeline: [
+                { year: '2025 하반기', event: '기본계획 수립 및 설계' },
+                { year: '2026 상반기', event: '1차 코스(초급, 중급) 및 기본시설 구축' },
+                { year: '2026 하반기', event: '첫 MTB 페스티벌 개최' },
+                { year: '2027 상반기', event: '고급 코스 및 익스트림 코스 개발' },
+                { year: '2027 하반기', event: '전체 시설 완공 및 국제 대회 유치' }
+            ]
+        },
+        'project4': {
+            title: '탄광 어드벤처 코스',
+            icon: 'fas fa-mountain',
+            description: '태백의 산업유산인 폐광 시설을 활용하여 독특한 스포츠 체험 공간으로 재탄생시키는 프로젝트입니다. 산업유산의 보존과 활용을 통해 태백만의 차별화된 스포츠 관광 자원을 개발합니다.',
+            location: '태백 시내 및 인근 폐광 시설, 총 면적 약 300,000㎡',
+            budget: '시설 개발 80억원, 연간 운영 8억원',
+            facilities: [
+                '지하 MTB 코스: 폐광 갱도 활용 실내 MTB 트랙 1.5km',
+                '마인 클라이밍: 갱내 암벽등반 코스 30개 루트',
+                '탄광 케이빙 어드벤처: 동굴탐험+역사체험 결합 투어',
+                '갱도 러닝 코스: 지하 순환코스 3km, 일정 온도 유지',
+                '광부 트레이닝 체험: 실제 광부 훈련 기반 피트니스 프로그램'
+            ],
+            effects: [
+                '연간 방문객 100,000명 이상 유치',
+                '폐광 지역 재활성화 및 일자리 200개 이상 창출',
+                '산업유산 보존 및 역사문화 교육 효과',
+                '국내외 미디어 주목도 상승으로 관광객 유입 증가'
+            ],
+            timeline: [
+                { year: '2025 하반기', event: '시설 타당성 조사 및 기본계획 수립' },
+                { year: '2026 상반기', event: '1차 개발: MTB 코스 및 클라이밍 시설' },
+                { year: '2026 하반기', event: '시설 시범 운영 및 프로그램 개발' },
+                { year: '2027 상반기', event: '2차 개발: 케이빙 및 갱도 러닝 코스' },
+                { year: '2027 하반기', event: '전체 시설 개장 및 본격 운영' }
+            ]
+        }
+    };
+    
+    // 모달 열기
+    projectLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // 프로젝트 데이터 가져오기
+            const projectId = link.getAttribute('data-project');
+            const project = projectData[projectId];
+            
+            // 모달에 데이터 채우기
+            document.getElementById('modalTitle').textContent = project.title;
+            document.getElementById('modalIcon').className = project.icon + ' text-white text-6xl';
+            document.getElementById('modalDescription').textContent = project.description;
+            document.getElementById('modalLocation').textContent = project.location;
+            document.getElementById('modalBudget').textContent = project.budget;
+            
+            // 시설 목록
+            const facilitiesEl = document.getElementById('modalFacilities');
+            facilitiesEl.innerHTML = '';
+            project.facilities.forEach(facility => {
+                const li = document.createElement('li');
+                li.textContent = facility;
+                facilitiesEl.appendChild(li);
+            });
+            
+            // 효과 목록
+            const effectsEl = document.getElementById('modalEffects');
+            effectsEl.innerHTML = '';
+            project.effects.forEach(effect => {
+                const li = document.createElement('li');
+                li.textContent = effect;
+                effectsEl.appendChild(li);
+            });
+            
+            // 타임라인
+            const timelineEl = document.getElementById('modalTimeline');
+            timelineEl.innerHTML = '';
+            project.timeline.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'mb-2';
+                
+                const span = document.createElement('span');
+                span.className = 'font-bold text-primary mr-2';
+                span.textContent = item.year + ':';
+                
+                div.appendChild(span);
+                div.appendChild(document.createTextNode(' ' + item.event));
+                
+                timelineEl.appendChild(div);
+            });
+            
+            // 모달 표시
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // 스크롤 방지
+        });
+    });
+    
+    // 모달 닫기
+    closeModal.addEventListener('click', () => {
+        modal.classList.add('hidden');
+        document.body.style.overflow = ''; // 스크롤 복원
+    });
+    
+    // 모달 외부 클릭 시 닫기
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // 스크롤 애니메이션
+    function animateOnScroll() {
+        const elements = document.querySelectorAll('.grid > div, .section-header, .max-w-3xl');
+        
+        elements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+            
+            if(elementPosition < screenPosition) {
+                element.classList.add('animate-fade-in');
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', animateOnScroll);
+</script>
+
+</body>
+</html>
