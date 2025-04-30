@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>산악자전거 특화지구 | 태백 고원 스포츠 명품도시</title>
+    <meta name="description" content="다양한 난이도의 MTB 코스와 편의시설을 구축하여 국내 최고의 산악자전거 목적지로 발전시키는 프로젝트입니다.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2C7873',
+                        secondary: '#5D4037',
+                        accent: '#FF5722',
+                        highlight: '#01579B',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* 추가 애니메이션 */
+        .animate-count {
+            animation: countUp 2s forwards;
+        }
+        
+        @keyframes countUp {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        /* 트랙 다이어그램 애니메이션 */
+        .track-path {
+            stroke-dasharray: 15;
+            animation: dash 40s linear infinite;
+        }
+
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 1000;
+            }
+        }
+
+        /* 난이도 바 */
+        .difficulty-bar {
+            height: 8px;
+            border-radius: 4px;
+            background-color: #e0e0e0;
+            overflow: hidden;
+        }
+
+        .difficulty-level {
+            height: 100%;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- 헤더 -->
+    <header class="bg-primary text-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-xl font-bold">태백 고원 스포츠 명품도시</a>
+            <nav>
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="../index.html#vision" class="hover:text-accent transition-colors">비전 소개</a></li>
+                    <li><a href="../index.html#improvement" class="hover:text-accent transition-colors">개선방안</a></li>
+                    <li><a href="../index.html#projects" class="hover:text-accent transition-colors">핵심 프로젝트</a></li>
+                    <li><a href="../index.html#effects" class="hover:text-accent transition-colors">기대효과</a></li>
+                    <li><a href="../benchmark.html" class="hover:text-accent transition-colors">벤치마크 사례</a></li>
+                </ul>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 모바일 메뉴 -->
+        <div id="mobile-menu" class="hidden bg-primary shadow-md md:hidden">
+            <ul class="flex flex-col p-4 space-y-3">
+                <li><a href="../index.html#vision" class="block hover:text-accent transition-colors">비전 소개</a></li>
+                <li><a href="../index.html#improvement" class="block hover:text-accent transition-colors">개선방안</a></li>
+                <li><a href="../index.html#projects" class="block hover:text-accent transition-colors">핵심 프로젝트</a></li>
+                <li><a href="../index.html#effects" class="block hover:text-accent transition-colors">기대효과</a></li>
+                <li><a href="../benchmark.html" class="block hover:text-accent transition-colors">벤치마크 사례</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 프로젝트 헤더 섹션 -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-secondary to-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center">
+                <div class="w-full lg:w-2/3 pr-0 lg:pr-12">
+                    <div class="flex items-center mb-6">
+                        <a href="../index.html" class="text-white/70 hover:text-white transition-colors">홈</a>
+                        <i class="fas fa-chevron-right mx-2 text-sm text-white/50"></i>
+                        <a href="../index.html#projects" class="text-white/70 hover:text-white transition-colors">핵심 프로젝트</a>
+                        <i class="fas fa-chevron-right mx-2 text-sm text-white/50"></i>
+                        <span class="text-white">산악자전거 특화지구</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">산악자전거 특화지구</h1>
+                    <p class="text-xl mb-8 animate-fade-in" style="animation-delay: 0.2s;">다양한 난이도의 MTB 코스와 편의시설을 구축하여 국내 최고의 산악자전거 목적지로 발전시키는 프로젝트입니다. 계절에 상관없이 즐길 수 있는 지속가능한 MTB 문화를 조성합니다.</p>
+                    
+                    <div class="flex flex-wrap gap-4 animate-fade-in" style="animation-delay: 0.4s;">
+                        <div class="inline-flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>하이원 리조트 일원 및 폐광지역</span>
+                        </div>
+                        <div class="inline-flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
+                            <i class="fas fa-expand-arrows-alt mr-2"></i>
+                            <span>총 면적 약 500,000㎡</span>
+                        </div>
+                        <div class="inline-flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
+                            <i class="fas fa-coins mr-2"></i>
+                            <span>총 투자비 110억원</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/3 mt-12 lg:mt-0">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center shadow-lg">
+                        <i class="fas fa-bicycle text-8xl mb-6"></i>
+                        <div class="text-2xl font-bold">2026년 하반기</div>
+                        <div class="text-lg">첫 MTB 페스티벌 개최 예정</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 프로젝트 개요 섹션 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-primary mb-8 text-center">프로젝트 개요</h2>
+                
+                <div class="bg-gray-50 rounded-lg shadow-md p-8 mb-12">
+                    <p class="text-lg mb-6">태백 산악자전거 특화지구는 태백의 고저차가 큰 지형과 자연 환경을 활용하여 다양한 난이도의 MTB 코스와 편의시설을 구축함으로써 국내 최고의 산악자전거 목적지로 발전시키는 프로젝트입니다.</p>
+                    
+                    <p class="text-lg mb-6">이 프로젝트는 초보자부터 전문가까지 모든 수준의 라이더들이 즐길 수 있는 다운힐, 크로스컨트리, 펌프트랙 등 다양한 코스를 개발하고, 폐광 시설을 활용한 독특한 어드벤처 코스도 포함하여 태백만의 차별화된 MTB 경험을 제공합니다.</p>
+                    
+                    <p class="text-lg">또한 겨울철 팻바이크 프로그램과 눈길 MTB 대회 등을 통해 사계절 운영 체계를 구축하고, MTB 아카데미와 가이드 양성 과정 등 교육 프로그램을 운영하여 지역 주민 참여와 일자리 창출에도 기여할 계획입니다.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-bold text-primary mb-4">목표 및 비전</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>국내 최고의 산악자전거 목적지 조성</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>사계절 이용 가능한 MTB 인프라 구축</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>국제 수준의 MTB 대회 유치</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>산업유산과 MTB의 창의적 결합</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>지역 주민 일자리 창출 및 참여 확대</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-bold text-primary mb-4">기대 효과</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>태백 MTB 페스티벌 아시아 MTB 시리즈 공식 대회화</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>MTB 관련 일자리 150개 이상 창출</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>연간 MTB 이용객 50,000명 이상 유치</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>겨울철 비수기 관광객 유입 증대</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>지역 경제 활성화 및 관광 수입 증대</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg shadow-md p-8">
+                    <h3 class="text-xl font-bold text-primary mb-4">산악자전거(MTB) 트렌드</h3>
+                    <p class="text-lg mb-6">산악자전거는 전 세계적으로 빠르게 성장하는 스포츠 중 하나로, 특히 코로나19 이후 야외 활동 수요 증가와 함께 더욱 인기가 높아지고 있습니다.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold text-gray-700 mb-2">국내 MTB 시장 성장세</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                <li>참여인구 2019년 약 50만 명 → 2023년 약 85만 명(70% 증가)</li>
+                                <li>MTB 동호회 수 연간 15% 이상 증가</li>
+                                <li>전국 MTB 대회 2023년 기준 50개 이상 개최</li>
+                                <li>MTB 관련 소비재 시장 연간 20% 성장</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-700 mb-2">글로벌 트렌드</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                <li>세계 MTB 시장 규모 2024년 35억 달러, 연간 8% 성장</li>
+                                <li>전기 MTB(e-MTB) 시장 급성장(연 25% 이상)</li>
+                                <li>MTB 목적지 관광(MTB Tourism) 부상</li>
+                                <li>전문 MTB 트레일 센터 확산(유럽, 북미 중심)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MTB 트랙 섹션 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary mb-8 text-center">MTB 트랙 시스템</h2>
+            
+            <div class="max-w-6xl mx-auto">
+                <!-- MTB 트랙 다이어그램 -->
+                <div class="bg-white rounded-lg shadow-md p-6 mb-12">
+                    <h3 class="text-xl font-bold text-primary mb-4 text-center">태백 MTB 트랙 네트워크</h3>
+                    <div class="h-96 bg-gray-100 rounded-lg overflow-hidden">
+                        <svg viewBox="0 0 1000 500" class="w-full h-full">
+                            <!-- 지형 윤곽 -->
+                            <path d="M50,400 C150,380 250,320 350,280 C450,240 550,230 650,250 C750,270 850,320 950,350" fill="none" stroke="#e0e0e0" stroke-width="2" />
+                            <path d="M50,380 C150,360 250,300 350,260 C450,220 550,210 650,230 C750,250 850,300 950,330" fill="none" stroke="#e0e0e0" stroke-width="2" />
+                            <path d="M50,360 C150,340 250,280 350,240 C450,200 550,190 650,210 C750,230 850,280 950,310" fill="none" stroke="#e0e0e0" stroke-width="2" />
+                            
+                            <!-- 다운힐 코스 -->
+                            <path d="M350,100 C355,150 360,200 350,250 C340,300 320,320 300,350 C280,380 250,390 220,400" fill="none" stroke="#D32F2F" stroke-width="4" class="track-path" />
+                            
+                            <!-- 중급 다운힐 코스 -->
+                            <path d="M450,120 C455,170 460,220 455,260 C450,300 445,330 420,370 C395,410 380,420 350,430" fill="none" stroke="#FB8C00" stroke-width="4" class="track-path" />
+                            
+                            <!-- 초급 다운힐 코스 -->
+                            <path d="M550,140 C555,180 560,220 565,260 C570,300 565,340 545,380 C525,420 510,440 480,450" fill="none" stroke="#43A047" stroke-width="4" class="track-path" />
+                            
+                            <!-- 크로스컨트리 코스 -->
+                            <path d="M100,300 C150,290 200,280 250,290 C300,300 350,320 400,310 C450,300 500,280 550,290 C600,300 650,320 700,310 C750,300 800,290 850,300" fill="none" stroke="#2196F3" stroke-width="4" class="track-path" />
+                            
+                            <!-- 폐광지 익스트림 코스 -->
+                            <path d="M650,200 C700,210 710,230 700,250 C690,270 670,280 680,300 C690,320 720,330 730,350 C740,370 735,390 700,400" fill="none" stroke="#9C27B0" stroke-width="4" class="track-path" />
+                            
+                            <!-- 주요 지점 -->
+                            <circle cx="350" cy="100" r="8" fill="#D32F2F" /> <!-- 고급 다운힐 출발점 -->
+                            <text x="360" y="90" fill="#333" font-size="12" font-weight="bold">고급 다운힐 출발</text>
+                            
+                            <circle cx="450" cy="120" r="8" fill="#FB8C00" /> <!-- 중급 다운힐 출발점 -->
+                            <text x="460" y="110" fill="#333" font-size="12" font-weight="bold">중급 다운힐 출발</text>
+                            
+                            <circle cx="550" cy="140" r="8" fill="#43A047" /> <!-- 초급 다운힐 출발점 -->
+                            <text x="560" y="130" fill="#333" font-size="12" font-weight="bold">초급 다운힐 출발</text>
+                            
+                            <circle cx="100" cy="300" r="8" fill="#2196F3" /> <!-- 크로스컨트리 출발점 -->
+                            <text x="110" y="290" fill="#333" font-size="12" font-weight="bold">XC 출발</text>
+                            
+                            <circle cx="650" cy="200" r="8" fill="#9C27B0" /> <!-- 폐광지 익스트림 코스 -->
+                            <text x="660" y="190" fill="#333" font-size="12" font-weight="bold">폐광지 익스트림</text>
+                            
+                            <circle cx="400" cy="310" r="8" fill="#4CAF50" /> <!-- 바이크 스테이션 -->
+                            <text x="410" y="300" fill="#333" font-size="12" font-weight="bold">바이크 스테이션</text>
+                            
+                            <circle cx="680" cy="300" r="8" fill="#FFC107" /> <!-- 펌프트랙 -->
+                            <text x="690" y="290" fill="#333" font-size="12" font-weight="bold">펌프트랙</text>
+                            
+                            <!-- 범례 -->
+                            <rect x="50" y="430" width="40" height="3" fill="#D32F2F" />
+                            <text x="100" y="435" fill="#333" font-size="12">고급 다운힐(3km)</text>
+                            
+                            <rect x="50" y="450" width="40" height="3" fill="#FB8C00" />
+                            <text x="100" y="455" fill="#333" font-size="12">중급 다운힐(5km)</text>
+                            
+                            <rect x="50" y="470" width="40" height="3" fill="#43A047" />
+                            <text x="100" y="475" fill="#333" font-size="12">초급 다운힐(7km)</text>
+                            
+                            <rect x="300" y="430" width="40" height="3" fill="#2196F3" />
+                            <text x="350" y="435" fill="#333" font-size="12">크로스컨트리(총 120km)</text>
+                            
+                            <rect x="300" y="450" width="40" height="3" fill="#9C27B0" />
+                            <text x="350" y="455" fill="#333" font-size="12">폐광지 익스트림 코스</text>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- 트랙 유형 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <!-- 다운힐 코스 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                        <div class="h-48 bg-red-700 flex items-center justify-center">
+                            <i class="fas fa-angle-double-down text-white text-5xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary mb-3">다운힐 코스</h3>
+                            <p class="text-gray-600 mb-4">급경사를 이용한 스릴 넘치는 다운힐 전용 코스로, 초급부터 고급까지 3개 난이도로 구성됩니다.</p>
+                            
+                            <div class="space-y-3 mb-4">
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium">초급(Green) - 7km</span>
+                                        <span class="text-sm font-medium">난이도: 쉬움</span>
+                                    </div>
+                                    <div class="difficulty-bar">
+                                        <div class="difficulty-level bg-green-500" style="width: 40%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium">중급(Blue) - 5km</span>
+                                        <span class="text-sm font-medium">난이도: 중간</span>
+                                    </div>
+                                    <div class="difficulty-bar">
+                                        <div class="difficulty-level bg-blue-500" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium">고급(Black) - 3km</span>
+                                        <span class="text-sm font-medium">난이도: 어려움</span>
+                                    </div>
+                                    <div class="difficulty-bar">
+                                        <div class="difficulty-level bg-red-700" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <ul class="text-gray-600 list-disc pl-5 space-y-1">
+                                <li>총 고도차 1,200m 활용</li>
+                                <li>자연 장애물과 인공 점프대</li>
+                                <li>안전 시설 완비</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- 크로스컨트리 코스 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                        <div class="h-48 bg-blue-600 flex items-center justify-center">
+                            <i class="fas fa-route text-white text-5xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary mb-3">크로스컨트리 코스</h3>
+                            <p class="text-gray-600 mb-4">태백의 자연환경을 다양하게 경험할 수 있는 장거리 코스로, 연결형 네트워크로 설계됩니다.</p>
+                            
+                            <div class="space-y-3 mb-4">
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium">가족형 - 10km</span>
+                                        <span class="text-sm font-medium">난이도: 매우 쉬움</span>
+                                    </div>
+                                    <div class="difficulty-bar">
+                                        <div class="difficulty-level bg-green-300" style="width: 20%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium">산악형 - 30km</span>
+                                        <span class="text-sm font-medium">난이도: 중간</span>
+                                    </div>
+                                    <div class="difficulty-bar">
+                                        <div class="difficulty-level bg-blue-500" style="width: 60%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium">울트라 - 80km</span>
+                                        <span class="text-sm font-medium">난이도: 극도의 체력 필요</span>
+                                    </div>
+                                    <div class="difficulty-bar">
+                                        <div class="difficulty-level bg-purple-700" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <ul class="text-gray-600 list-disc pl-5 space-y-1">
+                                <li>총 연장 120km의 네트워크</li>
+                                <li>다양한 지형 및 풍경 경험</li>
+                                <li>난이도별 5개 코스</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- 특화 코스 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                        <div class="h-48 bg-purple-700 flex items-center justify-center">
+                            <i class="fas fa-mountain text-white text-5xl"></i>
+                        </div>
+
+
+
+<div class="p-6">
+                           <h3 class="text-xl font-bold text-primary mb-3">특화 코스</h3>
+                           <p class="text-gray-600 mb-4">태백만의 독특한 환경을 활용한 차별화된 MTB 경험을 제공하는 특별 코스입니다.</p>
+                           
+                           <div class="space-y-3 mb-4">
+                               <div>
+                                   <div class="flex justify-between mb-1">
+                                       <span class="text-sm font-medium">폐광지 익스트림</span>
+                                       <span class="text-sm font-medium">난이도: 기술적 난이도 높음</span>
+                                   </div>
+                                   <div class="difficulty-bar">
+                                       <div class="difficulty-level bg-purple-600" style="width: 90%"></div>
+                                   </div>
+                               </div>
+                               
+                               <div>
+                                   <div class="flex justify-between mb-1">
+                                       <span class="text-sm font-medium">포레스트 점프라인</span>
+                                       <span class="text-sm font-medium">난이도: 중상급</span>
+                                   </div>
+                                   <div class="difficulty-bar">
+                                       <div class="difficulty-level bg-orange-500" style="width: 75%"></div>
+                                   </div>
+                               </div>
+                               
+                               <div>
+                                   <div class="flex justify-between mb-1">
+                                       <span class="text-sm font-medium">겨울철 눈길 MTB</span>
+                                       <span class="text-sm font-medium">난이도: 특수 환경</span>
+                                   </div>
+                                   <div class="difficulty-bar">
+                                       <div class="difficulty-level bg-blue-300" style="width: 65%"></div>
+                                   </div>
+                               </div>
+                           </div>
+                           
+                           <ul class="text-gray-600 list-disc pl-5 space-y-1">
+                               <li>폐광 시설 활용 어드벤처 코스</li>
+                               <li>자연지형 활용 점프, 드롭 섹션</li>
+                               <li>겨울철 팻바이크 전용 코스</li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+               
+               <!-- 서브 시설 -->
+               <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                   <!-- 교육 및 연습장 -->
+                   <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                       <div class="p-6">
+                           <h3 class="text-xl font-bold text-primary mb-4">교육 및 연습 시설</h3>
+                           <div class="space-y-4">
+                               <div>
+                                   <h4 class="font-bold text-gray-700 mb-2 flex items-center">
+                                       <i class="fas fa-gamepad text-accent mr-2"></i>
+                                       펌프트랙/스킬파크
+                                   </h4>
+                                   <p class="text-gray-600">초보자 교육용 5,000㎡ 규모 시설로, 기본 기술 연습과 재미있는 라이딩을 동시에 즐길 수 있습니다. 다양한 난이도의 범프와 턴으로 구성되어 기술 향상에 효과적입니다.</p>
+                               </div>
+                               
+                               <div>
+                                   <h4 class="font-bold text-gray-700 mb-2 flex items-center">
+                                       <i class="fas fa-child text-accent mr-2"></i>
+                                       키즈 바이크 파크
+                                   </h4>
+                                   <p class="text-gray-600">어린이 전용 안전 교육 및 체험장으로, 미래 MTB 세대를 위한 안전하고 재미있는 학습 공간입니다. 전문 강사의 지도하에 기본 기술을 배울 수 있습니다.</p>
+                               </div>
+                               
+                               <div>
+                                   <h4 class="font-bold text-gray-700 mb-2 flex items-center">
+                                       <i class="fas fa-graduation-cap text-accent mr-2"></i>
+                                       MTB 테크니컬 존
+                                   </h4>
+                                   <p class="text-gray-600">다양한 기술적 장애물과 섹션을 모아놓은 공간으로, 실제 트레일에서 만날 수 있는 다양한 상황을 연습할 수 있습니다. 록가든, 드롭, 시소 등 다양한 요소로 구성됩니다.</p>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   
+                   <!-- 편의 시설 -->
+                   <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                       <div class="p-6">
+                           <h3 class="text-xl font-bold text-primary mb-4">편의 시설</h3>
+                           <div class="space-y-4">
+                               <div>
+                                   <h4 class="font-bold text-gray-700 mb-2 flex items-center">
+                                       <i class="fas fa-tools text-accent mr-2"></i>
+                                       바이크 스테이션
+                                   </h4>
+                                   <p class="text-gray-600">4개소에 설치되는 종합 서비스 시설로, 자전거 대여, 수리, 세척, 보관 서비스를 제공합니다. 전문 정비사가 상주하여 안전한 라이딩을 지원합니다.</p>
+                               </div>
+                               
+                               <div>
+                                   <h4 class="font-bold text-gray-700 mb-2 flex items-center">
+                                       <i class="fas fa-bed text-accent mr-2"></i>
+                                       바이크 전용 숙소
+                                   </h4>
+                                   <p class="text-gray-600">자전거 보관, 세척, 정비가 가능한 MTB 특화 호스텔/펜션 인증제도를 운영합니다. 장기 체류 라이더를 위한 맞춤형 숙박 시설을 지원합니다.</p>
+                               </div>
+                               
+                               <div>
+                                   <h4 class="font-bold text-gray-700 mb-2 flex items-center">
+                                       <i class="fas fa-coffee text-accent mr-2"></i>
+                                       바이크 카페/레스트
+                                   </h4>
+                                   <p class="text-gray-600">라이더 커뮤니티 허브 공간으로, 휴식과 정보 교환, 네트워킹이 가능한 공간입니다. 영양식과 에너지 음료 등 라이더를 위한 특화 메뉴를 제공합니다.</p>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+
+   <!-- 프로그램 및 이벤트 섹션 -->
+   <section class="py-16 bg-white">
+       <div class="container mx-auto px-4">
+           <h2 class="text-3xl font-bold text-primary mb-8 text-center">프로그램 및 이벤트</h2>
+           
+           <div class="max-w-4xl mx-auto">
+               <!-- 교육/체험 프로그램 -->
+               <div class="bg-gray-50 rounded-lg shadow-md p-8 mb-12">
+                   <h3 class="text-2xl font-bold text-primary mb-6 text-center">교육 및 체험 프로그램</h3>
+                   
+                   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                       <div>
+                           <h4 class="text-xl font-bold text-secondary mb-4">MTB 아카데미</h4>
+                           <div class="space-y-3">
+                               <div class="flex items-start">
+                                   <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                   <div>
+                                       <span class="font-medium">입문자 과정</span>
+                                       <p class="text-gray-600">MTB 기초 기술 및 안전 교육 (주말 1일 코스)</p>
+                                   </div>
+                               </div>
+                               <div class="flex items-start">
+                                   <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                   <div>
+                                       <span class="font-medium">중급자 기술 과정</span>
+                                       <p class="text-gray-600">트레일 라이딩, 장애물 극복 기술 (2일 과정)</p>
+                                   </div>
+                               </div>
+                               <div class="flex items-start">
+                                   <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                   <div>
+                                       <span class="font-medium">어드밴스드 코스</span>
+                                       <p class="text-gray-600">다운힐, 점프, 드롭 등 고급 기술 (3일 과정)</p>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       
+                       <div>
+                           <h4 class="text-xl font-bold text-secondary mb-4">특별 프로그램</h4>
+                           <div class="space-y-3">
+                               <div class="flex items-start">
+                                   <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                   <div>
+                                       <span class="font-medium">가이드 양성과정</span>
+                                       <p class="text-gray-600">지역주민 대상 MTB 가이드 교육 (연 50명)</p>
+                                   </div>
+                               </div>
+                               <div class="flex items-start">
+                                   <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                   <div>
+                                       <span class="font-medium">바이크 캠프</span>
+                                       <p class="text-gray-600">주말/방학 기간 청소년 대상 2-5일 캠프</p>
+                                   </div>
+                               </div>
+                               <div class="flex items-start">
+                                   <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                   <div>
+                                       <span class="font-medium">여성 MTB 프로그램</span>
+                                       <p class="text-gray-600">여성 라이더를 위한 특화 교육 및 그룹 라이딩</p>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               
+               <!-- 대회 및 이벤트 -->
+               <div class="bg-gray-50 rounded-lg shadow-md p-8 mb-12">
+                   <h3 class="text-2xl font-bold text-primary mb-6 text-center">대회 및 이벤트</h3>
+                   
+                   <div class="space-y-8">
+                       <div class="flex flex-col md:flex-row">
+                           <div class="w-full md:w-1/3 mb-4 md:mb-0 md:pr-6">
+                               <div class="bg-secondary h-full rounded-lg text-white p-6 flex flex-col items-center justify-center">
+                                   <i class="fas fa-trophy text-4xl mb-2"></i>
+                                   <h4 class="text-xl font-bold">태백 MTB 페스티벌</h4>
+                                   <p class="text-center">매년 7월</p>
+                               </div>
+                           </div>
+                           <div class="w-full md:w-2/3">
+                               <p class="text-gray-600 mb-4">아시아 MTB 시리즈 공식 대회로 기획된 태백의 대표 MTB 이벤트입니다. 다운힐, 크로스컨트리, 엔듀로 등 다양한 종목의 대회가 열리며, 전시회와 체험 행사도 함께 진행됩니다.</p>
+                               <div class="flex flex-wrap gap-2">
+                                   <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">국제 대회</span>
+                                   <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">다양한 종목</span>
+                                   <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">바이크 엑스포</span>
+                                   <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">예상 참가자 3,000명</span>
+                               </div>
+                           </div>
+                       </div>
+                       
+                       <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row">
+                           <div class="w-full md:w-1/3 mb-4 md:mb-0 md:pr-6">
+                               <div class="bg-accent h-full rounded-lg text-white p-6 flex flex-col items-center justify-center">
+                                   <i class="fas fa-snowflake text-4xl mb-2"></i>
+                                   <h4 class="text-xl font-bold">윈터 MTB 챌린지</h4>
+                                   <p class="text-center">매년 1월</p>
+                               </div>
+                           </div>
+                           <div class="w-full md:w-2/3">
+                               <p class="text-gray-600 mb-4">눈길에서 진행되는 독특한 겨울 MTB 대회로, 팻바이크와 특수 타이어를 장착한 MTB로 참가 가능합니다. 겨울 비수기 관광객 유치와 사계절 MTB 문화 확산을 위한 이벤트입니다.</p>
+                               <div class="flex flex-wrap gap-2">
+                                   <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">겨울 특화</span>
+                                   <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">팻바이크 경기</span>
+                                   <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">야간 라이딩</span>
+                                   <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">예상 참가자 800명</span>
+                               </div>
+                           </div>
+                       </div>
+                       
+                       <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row">
+                           <div class="w-full md:w-1/3 mb-4 md:mb-0 md:pr-6">
+                               <div class="bg-purple-700 h-full rounded-lg text-white p-6 flex flex-col items-center justify-center">
+                                   <i class="fas fa-hard-hat text-4xl mb-2"></i>
+                                   <h4 class="text-xl font-bold">탄광 MTB 레이스</h4>
+                                   <p class="text-center">매년 10월</p>
+                               </div>
+                           </div>
+                           <div class="w-full md:w-2/3">
+                               <p class="text-gray-600 mb-4">폐광 시설을 활용한 특별 코스에서 진행되는 독특한 경험의 레이스입니다. 갱도 통과 구간, 산업유산 코스 등 태백만의 차별화된 환경에서 펼쳐지는 이색 대회입니다.</p>
+                               <div class="flex flex-wrap gap-2">
+                                   <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">산업유산 활용</span>
+                                   <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">어드벤처 레이스</span>
+                                   <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">헤드랜턴 구간</span>
+                                   <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">예상 참가자 1,200명</span>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               
+               <!-- 사계절 운영 전략 -->
+               <div class="bg-gray-50 rounded-lg shadow-md p-8">
+                   <h3 class="text-2xl font-bold text-primary mb-6 text-center">사계절 운영 전략</h3>
+                   
+                   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                       <div class="bg-white rounded-lg p-4 shadow-sm">
+                           <div class="text-center mb-3">
+                               <i class="fas fa-leaf text-green-500 text-3xl"></i>
+                               <h4 class="text-lg font-bold mt-2">봄</h4>
+                           </div>
+                           <ul class="text-gray-600 space-y-2">
+                               <li>- 시즌 오픈 이벤트 (4월)</li>
+                               <li>- 봄꽃 트레일 라이딩</li>
+                               <li>- 아카데미 정규 과정</li>
+                               <li>- 트레일 정비 자원봉사</li>
+                           </ul>
+                       </div>
+                       
+                       <div class="bg-white rounded-lg p-4 shadow-sm">
+                           <div class="text-center mb-3">
+                               <i class="fas fa-sun text-yellow-500 text-3xl"></i>
+                               <h4 class="text-lg font-bold mt-2">여름</h4>
+                           </div>
+                           <ul class="text-gray-600 space-y-2">
+                               <li>- 태백 MTB 페스티벌 (7월)</li>
+                               <li>- 나이트 라이딩 이벤트</li>
+                               <li>- 청소년 MTB 캠프</li>
+                               <li>- 프로 선수 시범 및 강습</li>
+                           </ul>
+                       </div>
+                       
+                       <div class="bg-white rounded-lg p-4 shadow-sm">
+                           <div class="text-center mb-3">
+                               <i class="fas fa-tree text-orange-500 text-3xl"></i>
+                               <h4 class="text-lg font-bold mt-2">가을</h4>
+                           </div>
+                           <ul class="text-gray-600 space-y-2">
+                               <li>- 탄광 MTB 레이스 (10월)</li>
+                               <li>- 단풍 트레일 투어</li>
+                               <li>- 엔듀로 시리즈 결승전</li>
+                               <li>- 가족 MTB 페스티벌</li>
+                           </ul>
+                       </div>
+                       
+                       <div class="bg-white rounded-lg p-4 shadow-sm">
+                           <div class="text-center mb-3">
+                               <i class="fas fa-snowflake text-blue-300 text-3xl"></i>
+                               <h4 class="text-lg font-bold mt-2">겨울</h4>
+                           </div>
+                           <ul class="text-gray-600 space-y-2">
+                               <li>- 윈터 MTB 챌린지 (1월)</li>
+                               <li>- 팻바이크 대여 및 체험</li>
+                               <li>- 실내 기술 훈련 프로그램</li>
+                               <li>- 장비 관리 워크숍</li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+
+   <!-- 추진 일정 섹션 -->
+   <section class="py-16 bg-gray-50">
+       <div class="container mx-auto px-4">
+           <h2 class="text-3xl font-bold text-primary mb-8 text-center">추진 일정</h2>
+           
+           <div class="max-w-4xl mx-auto relative">
+               <!-- 중앙선 -->
+               <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-secondary transform -translate-x-1/2"></div>
+               
+               <!-- 타임라인 항목 1 -->
+               <div class="relative flex flex-col md:flex-row mb-16 items-center md:items-start">
+                   <div class="order-1 md:w-1/2 md:pr-8 md:text-right">
+                       <div class="bg-white p-6 rounded-lg shadow-md">
+                           <h3 class="text-xl font-bold text-secondary mb-3">2025 하반기</h3>
+                           <p class="text-gray-600 mb-4">기본계획 수립 및 설계</p>
+                           <ul class="space-y-2 md:text-right">
+                               <li>사업 타당성 검토 및 마스터플랜 수립</li>
+                               <li>해외 벤치마킹 및 전문가 자문</li>
+                               <li>지형 분석 및 코스 경로 설계</li>
+                               <li>환경영향평가 및 인허가</li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="order-0 md:order-1 md:w-1/2 md:pl-8 mt-8 md:mt-0">
+                       <div class="hidden md:block"></div>
+                   </div>
+                   <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+                       <div class="bg-secondary text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold shadow-md z-10">1</div>
+                   </div>
+               </div>
+               
+               <!-- 타임라인 항목 2 -->
+               <div class="relative flex flex-col md:flex-row mb-16 items-center md:items-start">
+                   <div class="order-1 md:order-0 md:w-1/2 md:pr-8 mt-8 md:mt-0">
+                       <div class="bg-white p-6 rounded-lg shadow-md md:text-right">
+                           <h3 class="text-xl font-bold text-accent mb-3">2026 상반기</h3>
+                           <p class="text-gray-600 mb-4">1차 코스(초급, 중급) 및 기본시설 구축</p>
+                           <ul class="space-y-2 md:text-right">
+                               <li>초급 및 중급 다운힐 코스 개발</li>
+                               <li>펌프트랙 및 스킬파크 조성</li>
+                               <li>1차 크로스컨트리 코스 개발(50km)</li>
+                               <li>바이크 스테이션 2개소 설치</li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="order-0 md:order-1 md:w-1/2 md:pl-8">
+                       <div class="hidden md:block"></div>
+                   </div>
+                   <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+                       <div class="bg-accent text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold shadow-md z-10">2</div>
+                   </div>
+               </div>
+               
+               <!-- 타임라인 항목 3 -->
+               <div class="relative flex flex-col md:flex-row mb-16 items-center md:items-start">
+                   <div class="order-1 md:w-1/2 md:pr-8 md:text-right">
+                       <div class="bg-white p-6 rounded-lg shadow-md">
+                           <h3 class="text-xl font-bold text-primary mb-3">2026 하반기</h3>
+                           <p class="text-gray-600 mb-4">첫 MTB 페스티벌 개최</p>
+                           <ul class="space-y-2 md:text-right">
+                               <li>제1회 태백 MTB 페스티벌 개최</li>
+                               <li>MTB 아카데미 정식 오픈</li>
+                               <li>고급 다운힐 코스 착공</li>
+                               <li>폐광지 익스트림 코스 설계</li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="order-0 md:order-1 md:w-1/2 md:pl-8 mt-8 md:mt-0">
+                       <div class="hidden md:block"></div>
+                   </div>
+                   <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+                       <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold shadow-md z-10">3</div>
+                   </div>
+               </div>
+               
+               <!-- 타임라인 항목 4 -->
+               <div class="relative flex flex-col md:flex-row items-center md:items-start">
+                   <div class="order-1 md:order-0 md:w-1/2 md:pr-8 mt-8 md:mt-0">
+                       <div class="bg-white p-6 rounded-lg shadow-md md:text-right">
+                           <h3 class="text-xl font-bold text-secondary mb-3">2027 상반기</h3>
+                           <p class="text-gray-600 mb-4">전체 시설 완공 및 국제 대회 유치</p>
+                           <ul class="space-y-2 md:text-right">
+                               <li>고급 다운힐 코스 완공</li>
+                               <li>폐광지 익스트림 코스 오픈</li>
+                               <li>전체 크로스컨트리 코스 완성(120km)</li>
+                               <li>아시아 MTB 시리즈 유치 확정</li>
+                               <li>겨울철 팻바이크 프로그램 개발</li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="order-0 md:order-1 md:w-1/2 md:pl-8">
+                       <div class="hidden md:block"></div>
+                   </div>
+                   <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+                       <div class="bg-secondary text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold shadow-md z-10">4</div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+
+   <!-- 관련 프로젝트 섹션 -->
+   <section class="py-16 bg-white">
+       <div class="container mx-auto px-4">
+           <h2 class="text-3xl font-bold text-primary mb-8 text-center">관련 프로젝트</h2>
+           
+           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <a href="science-center.html" class="bg-gray-50 rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                    <div class="h-48 bg-primary flex items-center justify-center">
+                        <i class="fas fa-dumbbell text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">태백 고지대 스포츠 과학센터</h3>
+                        <p class="text-gray-600 mb-4">해발 800-1,400m 고원지대의 국내 유일 고지대 트레이닝 시설</p>
+                        <span class="inline-block text-accent font-medium hover:underline">자세히 보기</span>
+                    </div>
+                </a>
+                
+                <a href="International_Trail_Learning.html" class="bg-gray-50 rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                    <div class="h-48 bg-highlight flex items-center justify-center">
+                        <i class="fas fa-running text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">국제 트레일러닝 네트워크</h3>
+                        <p class="text-gray-600 mb-4">ITRA 인증 국제 수준의 트레일러닝 코스</p>
+                        <span class="inline-block text-accent font-medium hover:underline">자세히 보기</span>
+                    </div>
+                </a>
+                
+                <a href="Coal_Mine_Adventure_Course.html" class="bg-gray-50 rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                    <div class="h-48 bg-gray-700 flex items-center justify-center">
+                        <i class="fas fa-hard-hat text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">탄광 어드벤처 코스</h3>
+                        <p class="text-gray-600 mb-4">폐광 시설을 활용한 독특한 스포츠 체험 공간</p>
+                        <span class="inline-block text-accent font-medium hover:underline">자세히 보기</span>
+                    </div>
+                </a>
+            </div>
+       </div>
+   </section>
+
+   <!-- 푸터 -->
+   <footer class="bg-gray-900 text-white py-12">
+       <div class="container mx-auto px-4">
+           <div class="flex flex-wrap justify-between mb-8">
+               <div class="w-full md:w-1/3 mb-8 md:mb-0">
+                   <h2 class="text-2xl font-bold mb-4">태백 고원 스포츠 명품도시</h2>
+                   <p class="text-gray-400 mb-4">자연과 스포츠가 공존하는 미래의 태백</p>
+                   <div class="flex space-x-4">
+                       <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                           <i class="fab fa-facebook-f"></i>
+                       </a>
+                       <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                           <i class="fab fa-twitter"></i>
+                       </a>
+                       <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                           <i class="fab fa-instagram"></i>
+                       </a>
+                       <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                           <i class="fab fa-youtube"></i>
+                       </a>
+                   </div>
+               </div>
+               
+               <div class="w-full md:w-1/3 mb-8 md:mb-0">
+                   <h3 class="text-xl font-bold mb-4">주요 링크</h3>
+                   <ul class="space-y-2">
+                       <li><a href="../index.html#vision" class="text-gray-400 hover:text-white transition-colors">비전 소개</a></li>
+                       <li><a href="../index.html#improvement" class="text-gray-400 hover:text-white transition-colors">개선방안</a></li>
+                       <li><a href="../index.html#projects" class="text-gray-400 hover:text-white transition-colors">핵심 프로젝트</a></li>
+                       <li><a href="../index.html#effects" class="text-gray-400 hover:text-white transition-colors">기대효과</a></li>
+                       <li><a href="../benchmark.html" class="text-gray-400 hover:text-white transition-colors">벤치마크 사례</a></li>
+                   </ul>
+               </div>
+               
+               <div class="w-full md:w-1/3">
+                   <h3 class="text-xl font-bold mb-4">연락처</h3>
+                   <ul class="space-y-3">
+                       <li class="flex items-start">
+                           <i class="fas fa-map-marker-alt text-accent mt-1 mr-3"></i>
+                           <span class="text-gray-400">강원특별자치도 태백시 태백로 994 (황지동)</span>
+                       </li>
+                       <li class="flex items-start">
+                           <i class="fas fa-phone text-accent mt-1 mr-3"></i>
+                           <span class="text-gray-400">033-550-2011</span>
+                       </li>
+                       <li class="flex items-start">
+                           <i class="fas fa-envelope text-accent mt-1 mr-3"></i>
+                           <span class="text-gray-400">jwbk8911@korea.kr</span>
+                       </li>
+                   </ul>
+               </div>
+           </div>
+           
+           <div class="pt-8 border-t border-gray-800 text-center text-gray-500">
+               <p>&copy; 2025 태백 고원 스포츠 명품도시. All Rights Reserved.</p>
+           </div>
+       </div>
+   </footer>
+
+   <!-- JavaScript -->
+   <script>
+       // 모바일 메뉴 토글
+       document.getElementById('menu-toggle').addEventListener('click', function() {
+           const mobileMenu = document.getElementById('mobile-menu');
+           mobileMenu.classList.toggle('hidden');
+       });
+
+       // 스크롤 시 헤더 스타일 변경
+       window.addEventListener('scroll', function() {
+           const header = document.querySelector('header');
+           if (window.scrollY > 50) {
+               header.classList.add('bg-white', 'text-gray-900', 'shadow-md');
+               header.classList.remove('bg-primary', 'text-white');
+           } else {
+               header.classList.add('bg-primary', 'text-white');
+               header.classList.remove('bg-white', 'text-gray-900');
+           }
+       });
+
+       // 스크롤 애니메이션
+       function animateOnScroll() {
+           const elements = document.querySelectorAll('.grid > div, .section-header, .max-w-3xl');
+           
+           elements.forEach(element => {
+               const elementPosition = element.getBoundingClientRect().top;
+               const screenPosition = window.innerHeight / 1.3;
+               
+               if(elementPosition < screenPosition) {
+                   element.classList.add('animate-fade-in');
+               }
+           });
+       }
+
+       window.addEventListener('scroll', animateOnScroll);
+       window.addEventListener('load', animateOnScroll);
+   </script>
+
+</body>
+</html>
