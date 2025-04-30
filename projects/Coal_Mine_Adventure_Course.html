@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탄광 어드벤처 코스 | 태백 고원 스포츠 명품도시</title>
+    <meta name="description" content="태백의 산업유산인 폐광 시설을 활용하여 독특한 스포츠 체험 공간으로 재탄생시키는 프로젝트입니다.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2C7873',
+                        secondary: '#5D4037',
+                        accent: '#FF5722',
+                        highlight: '#01579B',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* 추가 애니메이션 */
+        .animate-count {
+            animation: countUp 2s forwards;
+        }
+        
+        @keyframes countUp {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+        
+        /* 광부 모자 빛 효과 */
+        .miner-light {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .miner-light:after {
+            content: '';
+            position: absolute;
+            top: -25px;
+            left: calc(50% - 20px);
+            width: 40px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(45deg);
+            animation: lightBeam 4s infinite;
+        }
+        
+        @keyframes lightBeam {
+            0% { transform: rotate(45deg) translateX(-100px); }
+            20% { transform: rotate(45deg) translateX(100px); }
+            20.1% { transform: rotate(-45deg) translateX(-100px); }
+            40% { transform: rotate(-45deg) translateX(100px); }
+            40.1% { transform: rotate(45deg) translateX(-100px); }
+            60% { transform: rotate(45deg) translateX(100px); }
+            60.1% { transform: rotate(-45deg) translateX(-100px); }
+            80% { transform: rotate(-45deg) translateX(100px); }
+            80.1% { transform: rotate(45deg) translateX(-100px); }
+            100% { transform: rotate(45deg) translateX(100px); }
+        }
+        
+        /* 난이도 바 */
+        .difficulty-bar {
+            height: 8px;
+            border-radius: 4px;
+            background-color: #e0e0e0;
+            overflow: hidden;
+        }
+
+        .difficulty-level {
+            height: 100%;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- 헤더 -->
+    <header class="bg-primary text-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-xl font-bold">태백 고원 스포츠 명품도시</a>
+            <nav>
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="../index.html#vision" class="hover:text-accent transition-colors">비전 소개</a></li>
+                    <li><a href="../index.html#improvement" class="hover:text-accent transition-colors">개선방안</a></li>
+                    <li><a href="../index.html#projects" class="hover:text-accent transition-colors">핵심 프로젝트</a></li>
+                    <li><a href="../index.html#effects" class="hover:text-accent transition-colors">기대효과</a></li>
+                    <li><a href="../benchmark.html" class="hover:text-accent transition-colors">벤치마크 사례</a></li>
+                </ul>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 모바일 메뉴 -->
+        <div id="mobile-menu" class="hidden bg-primary shadow-md md:hidden">
+            <ul class="flex flex-col p-4 space-y-3">
+                <li><a href="../index.html#vision" class="block hover:text-accent transition-colors">비전 소개</a></li>
+                <li><a href="../index.html#improvement" class="block hover:text-accent transition-colors">개선방안</a></li>
+                <li><a href="../index.html#projects" class="block hover:text-accent transition-colors">핵심 프로젝트</a></li>
+                <li><a href="../index.html#effects" class="block hover:text-accent transition-colors">기대효과</a></li>
+                <li><a href="../benchmark.html" class="block hover:text-accent transition-colors">벤치마크 사례</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 프로젝트 헤더 섹션 -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-gray-800 to-gray-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center">
+                <div class="w-full lg:w-2/3 pr-0 lg:pr-12">
+                    <div class="flex items-center mb-6">
+                        <a href="../index.html" class="text-white/70 hover:text-white transition-colors">홈</a>
+                        <i class="fas fa-chevron-right mx-2 text-sm text-white/50"></i>
+                        <a href="../index.html#projects" class="text-white/70 hover:text-white transition-colors">핵심 프로젝트</a>
+                        <i class="fas fa-chevron-right mx-2 text-sm text-white/50"></i>
+                        <span class="text-white">탄광 어드벤처 코스</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">탄광 어드벤처 코스</h1>
+                    <p class="text-xl mb-8 animate-fade-in" style="animation-delay: 0.2s;">태백의 산업유산인 폐광 시설을 활용하여 독특한 스포츠 체험 공간으로 재탄생시키는 프로젝트입니다. 산업유산의 보존과 활용을 통해 태백만의 차별화된 스포츠 관광 자원을 개발합니다.</p>
+                    
+                    <div class="flex flex-wrap gap-4 animate-fade-in" style="animation-delay: 0.4s;">
+                        <div class="inline-flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>태백 시내 및 인근 폐광 시설</span>
+                        </div>
+                        <div class="inline-flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
+                            <i class="fas fa-expand-arrows-alt mr-2"></i>
+                            <span>총 면적 약 300,000㎡</span>
+                        </div>
+                        <div class="inline-flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
+                            <i class="fas fa-coins mr-2"></i>
+                            <span>투자비 80억원</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/3 mt-12 lg:mt-0">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center shadow-lg miner-light">
+                        <i class="fas fa-hard-hat text-8xl mb-6"></i>
+                        <div class="text-2xl font-bold">2026년 하반기</div>
+                        <div class="text-lg">시설 시범 운영 시작</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 프로젝트 개요 섹션 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-primary mb-8 text-center">프로젝트 개요</h2>
+                
+                <div class="bg-gray-50 rounded-lg shadow-md p-8 mb-12">
+                    <p class="text-lg mb-6">탄광 어드벤처 코스는 태백의 주요 산업유산인 폐광 시설을 창의적으로 활용하여 독특한 스포츠 체험 공간으로 재탄생시키는 프로젝트입니다. 이 프로젝트는 산업유산의 보존 가치를 인정하면서도 현대적인 스포츠 활동을 접목하여 태백만의 차별화된 관광 자원으로 개발하는 것을 목표로 합니다.</p>
+                    
+                    <p class="text-lg mb-6">갱도, 선탄장, 폐철로 등 다양한 탄광 시설을 활용하여 MTB 코스, 암벽등반 시설, 케이빙 어드벤처, 갱도 러닝 코스 등을 개발하고, 광부 트레이닝 체험과 같은 교육적 요소도 결합합니다.</p>
+                    
+                    <p class="text-lg">이 프로젝트는 단순한 스포츠 시설을 넘어, 태백의 역사와 문화를 체험하고 배울 수 있는 교육적 가치도 함께 제공하며, 폐광 지역 재활성화와 지역 주민 일자리 창출에도 기여할 것입니다.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-bold text-primary mb-4">목표 및 비전</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>산업유산의 창의적 활용과 보존</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>글로벌 관광 시장에서 차별화된 경쟁력 확보</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>태백 탄광 역사와 문화의 교육적 전승</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>폐광 지역 재활성화 및 일자리 창출</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>실내외 융합형 사계절 관광 자원 개발</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-bold text-primary mb-4">기대 효과</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>연간 방문객 100,000명 이상 유치</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>폐광 지역 재활성화 및 일자리 200개 이상 창출</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>산업유산 보존 및 역사문화 교육 효과</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>국내외 미디어 주목도 상승으로 관광객 유입 증가</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>사계절 관광 인프라 강화로 계절 편중성 완화</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg shadow-md p-8">
+                    <h3 class="text-xl font-bold text-primary mb-4">산업유산 관광의 글로벌 트렌드</h3>
+                    <p class="text-lg mb-6">전 세계적으로 산업유산을 창의적으로 활용한 관광 개발이 주목받고 있으며, 특히 액티브 투어리즘과 결합한 모델이 성공하고 있습니다.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold text-gray-700 mb-2">글로벌 성공 사례</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                <li>독일 루르 지역: 졸페라인 탄광의 산업관광 연 150만 명 방문</li>
+                                <li>영국 웨일스: 짚라인 쿼리(폐광산 짚라인) 연 7만 명 방문</li>
+                                <li>뉴질랜드 카와라우 협곡: 폐광 번지점프 시설 연 5만 명 이용</li>
+                                <li>프랑스 르 크뢰조: 산업유산 등반 체험장 연 3만 명 방문</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-700 mb-2">국내 산업유산 현황</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                <li>전국 폐광산 4,800여 개소, 대부분 방치</li>
+                                <li>근대산업유산 관광지 방문객 지속 증가(연 15%↑)</li>
+                                <li>산업유산 친환경 활용에 대한 정부 정책 지원 확대</li>
+                                <li>체험형, 액티브형 산업관광 선호도 증가 추세</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 핵심 시설 섹션 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary mb-8 text-center">핵심 어드벤처 시설</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- 지하 MTB 코스 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                    <div class="h-48 bg-gray-700 flex items-center justify-center">
+                        <i class="fas fa-bicycle text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">지하 MTB 코스</h3>
+                        <p class="text-gray-600 mb-4">폐광 갱도를 활용한 실내 MTB 트랙으로, 세계적으로 유례가 드문 지하 바이킹 경험을 제공합니다.</p>
+                        
+                        <div class="space-y-3 mb-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">코스 길이: 1.5km</span>
+                                    <span class="text-sm font-medium">난이도: 중급-상급</span>
+                                </div>
+                                <div class="difficulty-bar">
+                                    <div class="difficulty-level bg-orange-500" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <ul class="text-gray-600 list-disc pl-5 space-y-1">
+                            <li>갱도 특수 LED 조명 시스템</li>
+                            <li>안전 지원 및 가이드 상주</li>
+                            <li>온도 18℃ 일정 유지(사계절 이용)</li>
+                            <li>역사 교육 포인트 8개소 설치</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 마인 클라이밍 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                    <div class="h-48 bg-gray-600 flex items-center justify-center">
+                        <i class="fas fa-mountain text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">마인 클라이밍</h3>
+                        <p class="text-gray-600 mb-4">갱내 암벽등반 코스로, 갱도 내벽과 구조물을 활용한 독특한 클라이밍 경험을 제공합니다.</p>
+                        
+                        <div class="space-y-3 mb-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">등반 루트: 30개</span>
+                                    <span class="text-sm font-medium">난이도: 초급-최상급</span>
+                                </div>
+                                <div class="difficulty-bar">
+                                    <div class="difficulty-level bg-gradient-to-r from-green-500 via-orange-500 to-red-600" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <ul class="text-gray-600 list-disc pl-5 space-y-1">
+                            <li>자연 암반 활용 클라이밍 월</li>
+                            <li>인공 볼더링 구간 조성</li>
+                            <li>안전 장비 및 전문 강사 지원</li>
+                            <li>초보자-전문가 구간 분리</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 탄광 케이빙 어드벤처 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                    <div class="h-48 bg-gray-800 flex items-center justify-center">
+                        <i class="fas fa-cave text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">탄광 케이빙 어드벤처</h3>
+                        <p class="text-gray-600 mb-4">동굴탐험과 역사체험을 결합한 투어로, 과거 광부들의 작업 환경을 직접 체험할 수 있습니다.</p>
+                        
+                        <div class="space-y-3 mb-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">탐험 코스: 3개</span>
+                                    <span class="text-sm font-medium">소요 시간: 1-3시간</span>
+                                </div>
+                                <div class="difficulty-bar">
+                                    <div class="difficulty-level bg-gradient-to-r from-blue-500 to-purple-700" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <ul class="text-gray-600 list-disc pl-5 space-y-1">
+                            <li>광부 장비 착용 체험</li>
+                            <li>좁은 통로, 사다리 통과 구간</li>
+                            <li>탄광 역사 해설 프로그램</li>
+                            <li>가족/단체/어드벤처 코스 구분</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 갱도 러닝 코스 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                    <div class="h-48 bg-gray-500 flex items-center justify-center">
+                        <i class="fas fa-running text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">갱도 러닝 코스</h3>
+                        <p class="text-gray-600 mb-4">지하 순환코스로 일정한 온도와 습도에서 연중 트레이닝이 가능한 실내 트레일러닝 시설입니다.</p>
+                        
+                        <div class="space-y-3 mb-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">코스 길이: 3km</span>
+                                    <span class="text-sm font-medium">고도차: 50m</span>
+                                </div>
+                                <div class="difficulty-bar">
+                                    <div class="difficulty-level bg-blue-500" style="width: 60%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <ul class="text-gray-600 list-disc pl-5 space-y-1">
+                            <li>LED 트랙 가이드 시스템</li>
+                            <li>겨울철 트레이닝에 최적화</li>
+                            <li>러닝 페이싱 시스템 설치</li>
+                            <li>역사 스토리텔링 오디오 가이드</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 광부 트레이닝 체험 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                    <div class="h-48 bg-amber-700 flex items-center justify-center">
+                        <i class="fas fa-dumbbell text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">광부 트레이닝 체험</h3>
+                        <p class="text-gray-600 mb-4">실제 광부 훈련 기반 피트니스 프로그램으로, 강도 높은 신체 단련과 역사 교육을 결합했습니다.</p>
+                        
+                        <div class="space-y-3 mb-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">체험 시간: 90분</span>
+                                    <span class="text-sm font-medium">난이도: 높음</span>
+                                </div>
+                                <div class="difficulty-bar">
+                                    <div class="difficulty-level bg-red-600" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <ul class="text-gray-600 list-disc pl-5 space-y-1">
+                            <li>광부 장비 착용 훈련</li>
+                            <li>석탄 채굴 모의 작업</li>
+                            <li>팀 협력 미션 수행</li>
+                            <li>선탄 과정 체험</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 마이닝 챌린지 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                    <div class="h-48 bg-gray-900 flex items-center justify-center">
+                        <i class="fas fa-gamepad text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">마이닝 챌린지</h3>
+                        <p class="text-gray-600 mb-4">석탄 채굴 작업을 모티브로 한 팀 경쟁 게임으로, 교육과 재미를 동시에 제공합니다.</p>
+                        
+                        <div class="space-y-3 mb-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">참가 인원: 4-20명/팀</span>
+                                    <span class="text-sm font-medium">소요 시간: 2시간</span>
+                                </div>
+                                <div class="difficulty-bar">
+                                    <div class="difficulty-level bg-green-500" style="width: 40%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <ul class="text-gray-600 list-disc pl-5 space-y-1">
+                            <li>미션 기반 팀 경쟁 방식</li>
+                            <li>탄광 퀴즈 및 물리적 챌린지</li>
+                            <li>가족, 학교, 기업 단체 프로그램</li>
+                            <li>승리팀 기념품 및 인증서 제공</li>
+                       </ul>
+                   </div>
+               </div>
+           </div>
+           
+           <!-- 인프라 시설 -->
+           <div class="mt-16 max-w-4xl mx-auto">
+               <h3 class="text-2xl font-bold text-primary mb-6 text-center">추가 인프라 시설</h3>
+               
+               <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                   <!-- 산업유산 활용 시설 -->
+                   <div class="bg-white rounded-lg shadow-md p-6">
+                       <h4 class="text-xl font-bold text-primary mb-4">산업유산 활용 시설</h4>
+                       <div class="space-y-4">
+                           <div>
+                               <h5 class="font-bold text-gray-700 mb-2 flex items-center">
+                                   <i class="fas fa-tram text-accent mr-2"></i>
+                                   선탄장 스케이트 파크
+                               </h5>
+                               <p class="text-gray-600">폐선탄장을 리모델링한 스케이트보드 및 인라인 전용 파크로, 높은 천장과 넓은 공간을 활용한 다양한 구조물을 배치합니다.</p>
+                           </div>
+                           
+                           <div>
+                               <h5 class="font-bold text-gray-700 mb-2 flex items-center">
+                                   <i class="fas fa-route text-accent mr-2"></i>
+                                   와이어타워 집라인
+                               </h5>
+                               <p class="text-gray-600">석탄 운반에 사용되던 와이어타워를 활용한 짚라인 시설로, 탄광 전경을 한눈에 내려다보며 짜릿한 경험을 제공합니다.</p>
+                           </div>
+                           
+                           <div>
+                               <h5 class="font-bold text-gray-700 mb-2 flex items-center">
+                                   <i class="fas fa-bolt text-accent mr-2"></i>
+                                   변전소 스포츠클럽
+                               </h5>
+                               <p class="text-gray-600">폐변전소를 리모델링한 실내스포츠 공간으로, 고산 지역 기후에 구애받지 않는 연중 트레이닝 시설을 제공합니다.</p>
+                           </div>
+                           
+                           <div>
+                               <h5 class="font-bold text-gray-700 mb-2 flex items-center">
+                                   <i class="fas fa-train text-accent mr-2"></i>
+                                   광산철로 레일바이크
+                               </h5>
+                               <p class="text-gray-600">폐철로를 활용한 레일바이크로, 탄광 주변의 자연경관을 감상하며 가족 단위로 즐길 수 있는 액티비티입니다.</p>
+                           </div>
+                       </div>
+                   </div>
+                   
+                   <!-- 체험 및 교육 시설 -->
+                   <div class="bg-white rounded-lg shadow-md p-6">
+                       <h4 class="text-xl font-bold text-primary mb-4">체험 및 교육 시설</h4>
+                       <div class="space-y-4">
+                           <div>
+                               <h5 class="font-bold text-gray-700 mb-2 flex items-center">
+                                   <i class="fas fa-landmark text-accent mr-2"></i>
+                                   블랙 히스토리 센터
+                               </h5>
+                               <p class="text-gray-600">태백 탄광의 역사와 문화를 체계적으로 전시하고 교육하는 공간으로, 인터랙티브 전시와 VR 체험을 제공합니다.</p>
+                           </div>
+                           
+                           <div>
+                               <h5 class="font-bold text-gray-700 mb-2 flex items-center">
+                                   <i class="fas fa-map-marked-alt text-accent mr-2"></i>
+                                   지오 트레일 정보센터
+                               </h5>
+                               <p class="text-gray-600">태백 지역의 지질학적 특성과 탄광 형성 과정을 배울 수 있는 교육 시설로, 지오 트레일 투어의 출발점입니다.</p>
+                           </div>
+                           
+                           <div>
+                               <h5 class="font-bold text-gray-700 mb-2 flex items-center">
+                                   <i class="fas fa-campground text-accent mr-2"></i>
+                                   마이너스 레스트 존
+                               </h5>
+                               <p class="text-gray-600">액티비티 후 휴식을 취할 수 있는 공간으로, 광부 식당을 모티브로 한 카페와 휴게공간을 제공합니다.</p>
+                           </div>
+                           
+                           <div>
+                               <h5 class="font-bold text-gray-700 mb-2 flex items-center">
+                                   <i class="fas fa-store text-accent mr-2"></i>
+                                   블랙 다이아몬드 샵
+                               </h5>
+                               <p class="text-gray-600">탄광 테마 기념품과 지역 특산품을 판매하는 공간으로, 지역 예술가들의 작품도 함께 전시합니다.</p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+
+   <!-- 프로그램 및 이벤트 섹션 -->
+   <section class="py-16 bg-white">
+       <div class="container mx-auto px-4">
+           <h2 class="text-3xl font-bold text-primary mb-8 text-center">프로그램 및 이벤트</h2>
+           
+           <div class="max-w-4xl mx-auto">
+               <!-- 정기 프로그램 -->
+               <div class="bg-gray-50 rounded-lg shadow-md p-8 mb-12">
+                   <h3 class="text-2xl font-bold text-primary mb-6 text-center">주요 프로그램</h3>
+                   
+                   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                       <div>
+                           <h4 class="text-xl font-bold text-secondary mb-4">정기 체험 프로그램</h4>
+                           <div class="space-y-3">
+                               <div class="flex items-start">
+                                   <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                   <div>
+                                       <span class="font-medium">하루 광부 체험</span>
+                                       <p class="text-gray-600">광부의 일상을 체험하는 반나절 프로그램 (2시간)</p>
+                                   </div>
+                               </div>
+                               <div class="flex items-start">
+                                   <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                   <div>
+                                       <span class="font-medium">어드벤처 케이버 코스</span>
+                                       <p class="text-gray-600">동굴 탐험 기술을 배우고 실전 체험하는 프로그램 (3시간)</p>
+                                   </div>
+                               </div>
+                               <div class="flex items-start">
+                                   <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                   <div>
+                                       <span class="font-medium">언더그라운드 포토 투어</span>
+                                       <p class="text-gray-600">지하 갱도의 독특한 풍경을 담는 사진 투어 (2시간)</p>
+                                   </div>
+                               </div>
+                               <div class="flex items-start">
+                                   <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                   <div>
+                                       <span class="font-medium">블랙 다이아몬드 트레일</span>
+                                       <p class="text-gray-600">탄광촌 마을과 산업유산을 연결하는 역사 트레킹 (4시간)</p>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       
+                       <div>
+                           <h4 class="text-xl font-bold text-secondary mb-4">교육 및 특별 프로그램</h4>
+                           <div class="space-y-3">
+                               <div class="flex items-start">
+                                   <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                   <div>
+                                       <span class="font-medium">학교 교육 프로그램</span>
+                                       <p class="text-gray-600">산업 역사와 지질학을 접목한 체험형 교육 (2-4시간)</p>
+                                   </div>
+                               </div>
+                               <div class="flex items-start">
+                                   <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                   <div>
+                                       <span class="font-medium">기업 팀빌딩 패키지</span>
+                                       <p class="text-gray-600">광부 정신을 배우는 단체 팀빌딩 활동 (4-8시간)</p>
+                                   </div>
+                               </div>
+                               <div class="flex items-start">
+                                   <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                   <div>
+                                       <span class="font-medium">어드벤처 스포츠 트레이닝</span>
+                                       <p class="text-gray-600">익스트림 스포츠 전문가의 기술 교육 (3시간)</p>
+                                   </div>
+                               </div>
+                               <div class="flex items-start">
+                                   <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                   <div>
+                                       <span class="font-medium">광부 가이드 양성과정</span>
+                                       <p class="text-gray-600">지역 주민 대상 전문 가이드 교육 (40시간)</p>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               
+               <!-- 이벤트 및 축제 -->
+               <div class="bg-gray-50 rounded-lg shadow-md p-8 mb-12">
+                   <h3 class="text-2xl font-bold text-primary mb-6 text-center">주요 이벤트</h3>
+                   
+                   <div class="space-y-8">
+                       <div class="flex flex-col md:flex-row">
+                           <div class="w-full md:w-1/3 mb-4 md:mb-0 md:pr-6">
+                               <div class="bg-gray-800 h-full rounded-lg text-white p-6 flex flex-col items-center justify-center miner-light">
+                                   <i class="fas fa-hard-hat text-4xl mb-2"></i>
+                                   <h4 class="text-xl font-bold">블랙 다이아몬드 레이스</h4>
+                                   <p class="text-center">매년 9월</p>
+                               </div>
+                           </div>
+                           <div class="w-full md:w-2/3">
+                               <p class="text-gray-600 mb-4">탄광촌 마을과 산업유산을 연결하는 특별한 레이스로, 갱도 통과, 선탄장 코스 등 태백 탄광의 역사를 함께 경험하는 독특한 러닝 대회입니다.</p>
+                               <div class="flex flex-wrap gap-2">
+                                   <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">10km/21km 코스</span>
+                                   <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">헤드랜턴 구간</span>
+                                   <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">광부 테마 메달</span>
+                                   <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">예상 참가자 1,500명</span>
+                               </div>
+                           </div>
+                       </div>
+                       
+                       <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row">
+                           <div class="w-full md:w-1/3 mb-4 md:mb-0 md:pr-6">
+                               <div class="bg-amber-700 h-full rounded-lg text-white p-6 flex flex-col items-center justify-center">
+                                   <i class="fas fa-film text-4xl mb-2"></i>
+                                   <h4 class="text-xl font-bold">언더그라운드 영화제</h4>
+                                   <p class="text-center">매년 7월</p>
+                               </div>
+                           </div>
+                           <div class="w-full md:w-2/3">
+                               <p class="text-gray-600 mb-4">갱도 내부를 영화관으로 변모시켜 진행되는 독특한 영화제로, 산업문화와 탄광을 주제로 한 국내외 다양한 영화를 상영합니다.</p>
+                               <div class="flex flex-wrap gap-2">
+                                   <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">갱도 스크리닝</span>
+                                   <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">탄광 테마 영화</span>
+                                   <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">감독과의 대화</span>
+                                   <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">예상 참가자 800명</span>
+                               </div>
+                           </div>
+                       </div>
+                       
+                       <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row">
+                           <div class="w-full md:w-1/3 mb-4 md:mb-0 md:pr-6">
+                               <div class="bg-gray-600 h-full rounded-lg text-white p-6 flex flex-col items-center justify-center">
+                                   <i class="fas fa-music text-4xl mb-2"></i>
+                                   <h4 class="text-xl font-bold">광산음향 페스티벌</h4>
+                                   <p class="text-center">매년 6월</p>
+                               </div>
+                           </div>
+                           <div class="w-full md:w-2/3">
+                               <p class="text-gray-600 mb-4">갱도와 선탄장의 독특한 음향 특성을 활용한 음악 페스티벌로, 실험 음악, 전자음악, 클래식 등 다양한 장르의 공연이 진행됩니다.</p>
+                               <div class="flex flex-wrap gap-2">
+                                   <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">갱도 음향 콘서트</span>
+                                   <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">산업음향 퍼포먼스</span>
+                                   <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">음향 워크숍</span>
+                                   <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">예상 참가자 1,200명</span>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               
+               <!-- 스토리텔링 강화 -->
+               <div class="bg-gray-50 rounded-lg shadow-md p-8">
+                   <h3 class="text-2xl font-bold text-primary mb-6 text-center">스토리텔링 강화</h3>
+                   
+                   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                       <div>
+                           <h4 class="text-xl font-bold text-secondary mb-4">디지털 스토리텔링</h4>
+                           <ul class="space-y-3">
+                               <li class="flex items-start">
+                                   <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                   <div>
+                                       <span class="font-medium">오디오 가이드 개발</span>
+                                       <p class="text-gray-600">코스별 역사/문화 해설 제공 (5개 언어 지원)</p>
+                                   </div>
+                               </li>
+                               <li class="flex items-start">
+                                   <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                   <div>
+                                       <span class="font-medium">증강현실 역사 체험</span>
+                                       <p class="text-gray-600">과거 탄광 모습 AR로 재현 (10개 포인트)</p>
+                                   </div>
+                               </li>
+                               <li class="flex items-start">
+                                   <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                   <div>
+                                       <span class="font-medium">인터랙티브 전시</span>
+                                       <p class="text-gray-600">터치스크린 기반 탄광 역사 전시 시스템</p>
+                                   </div>
+                               </li>
+                               <li class="flex items-start">
+                                   <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                   <div>
+                                       <span class="font-medium">디지털 아카이브</span>
+                                       <p class="text-gray-600">탄광 관련 자료 및 구술사 디지털 보존</p>
+                                   </div>
+                               </li>
+                           </ul>
+                       </div>
+                       
+                       <div>
+                           <h4 class="text-xl font-bold text-secondary mb-4">인적 스토리텔링</h4>
+                           <ul class="space-y-3">
+                               <li class="flex items-start">
+                                   <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                   <div>
+                                       <span class="font-medium">광부 가이드 프로그램</span>
+                                       <p class="text-gray-600">전직 광부 지역해설사 양성 (30명)</p>
+                                   </div>
+                               </li>
+                               <li class="flex items-start">
+                                   <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                   <div>
+                                       <span class="font-medium">광부 구술사 공연</span>
+                                       <p class="text-gray-600">실제 경험에 기반한 스토리텔링 공연</p>
+                                   </div>
+                               </li>
+                               <li class="flex items-start">
+                                   <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                   <div>
+                                       <span class="font-medium">탄광촌 생활사 재현</span>
+                                       <p class="text-gray-600">광부 가족의 일상 체험 프로그램</p>
+                                   </div>
+                               </li>
+                               <li class="flex items-start">
+                                   <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                   <div>
+                                       <span class="font-medium">지역 주민 참여 프로그램</span>
+                                       <p class="text-gray-600">탄광 관련 개인 기록 및 기억 공유 플랫폼</p>
+                                   </div>
+                               </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+
+   <!-- 추진 일정 섹션 -->
+   <section class="py-16 bg-gray-50">
+       <div class="container mx-auto px-4">
+           <h2 class="text-3xl font-bold text-primary mb-8 text-center">추진 일정</h2>
+           
+           <div class="max-w-4xl mx-auto relative">
+               <!-- 중앙선 -->
+               <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gray-700 transform -translate-x-1/2"></div>
+               
+               <!-- 타임라인 항목 1 -->
+               <div class="relative flex flex-col md:flex-row mb-16 items-center md:items-start">
+                   <div class="order-1 md:w-1/2 md:pr-8 md:text-right">
+                       <div class="bg-white p-6 rounded-lg shadow-md">
+                           <h3 class="text-xl font-bold text-gray-700 mb-3">2025 하반기</h3>
+                           <p class="text-gray-600 mb-4">시설 타당성 조사 및 기본계획 수립</p>
+                           <ul class="space-y-2 md:text-right">
+                               <li>폐광 시설 안전성 및 활용 가능성 조사</li>
+                               <li>국내외 벤치마킹 및 전문가 자문</li>
+                               <li>지역 주민 의견 수렴 및 공청회</li>
+                               <li>기본계획 및 콘텐츠 개발 방향 수립</li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="order-0 md:order-1 md:w-1/2 md:pl-8 mt-8 md:mt-0">
+                       <div class="hidden md:block"></div>
+                   </div>
+                   <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+                       <div class="bg-gray-700 text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold shadow-md z-10">1</div>
+                   </div>
+               </div>
+               
+               <!-- 타임라인 항목 2 -->
+               <div class="relative flex flex-col md:flex-row mb-16 items-center md:items-start">
+                   <div class="order-1 md:order-0 md:w-1/2 md:pr-8 mt-8 md:mt-0">
+                       <div class="bg-white p-6 rounded-lg shadow-md md:text-right">
+                           <h3 class="text-xl font-bold text-gray-700 mb-3">2026 상반기</h3>
+                           <p class="text-gray-600 mb-4">1차 개발: MTB 코스 및 클라이밍 시설</p>
+                           <ul class="space-y-2 md:text-right">
+                               <li>갱도 안전 보강 및 기초 시설 구축</li>
+                               <li>지하 MTB 코스 1단계 개발</li>
+                               <li>마인 클라이밍 시설 조성</li>
+                               <li>기본 편의시설 및 안전장치 설치</li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="order-0 md:order-1 md:w-1/2 md:pl-8">
+                       <div class="hidden md:block"></div>
+                   </div>
+                   <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+                       <div class="bg-gray-700 text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold shadow-md z-10">2</div>
+                   </div>
+               </div>
+               
+               <!-- 타임라인 항목 3 -->
+               <div class="relative flex flex-col md:flex-row mb-16 items-center md:items-start">
+                   <div class="order-1 md:w-1/2 md:pr-8 md:text-right">
+                       <div class="bg-white p-6 rounded-lg shadow-md">
+                           <h3 class="text-xl font-bold text-gray-700 mb-3">2026 하반기</h3>
+                           <p class="text-gray-600 mb-4">시설 시범 운영 및 프로그램 개발</p>
+                           <ul class="space-y-2 md:text-right">
+                               <li>1차 시설 시범 운영 및 개선</li>
+                               <li>광부 체험 및 케이빙 프로그램 개발</li>
+                               <li>전문 가이드 양성 과정 운영</li>
+                               <li>첫 블랙 다이아몬드 레이스 개최</li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="order-0 md:order-1 md:w-1/2 md:pl-8 mt-8 md:mt-0">
+                       <div class="hidden md:block"></div>
+                   </div>
+                   <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+                       <div class="bg-gray-700 text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold shadow-md z-10">3</div>
+                   </div>
+               </div>
+               
+               <!-- 타임라인 항목 4 -->
+               <div class="relative flex flex-col md:flex-row items-center md:items-start">
+                   <div class="order-1 md:order-0 md:w-1/2 md:pr-8 mt-8 md:mt-0">
+                       <div class="bg-white p-6 rounded-lg shadow-md md:text-right">
+                           <h3 class="text-xl font-bold text-gray-700 mb-3">2027 상반기</h3>
+                           <p class="text-gray-600 mb-4">2차 개발: 케이빙 및 갱도 러닝 코스</p>
+                           <ul class="space-y-2 md:text-right">
+                               <li>갱도 러닝 코스 개발</li>
+                               <li>탄광 케이빙 어드벤처 시설 완성</li>
+                               <li>AR/VR 스토리텔링 시스템 구축</li>
+                               <li>부대시설 완공 및 전체 시설 그랜드 오픈</li>
+                               <li>정기 이벤트 및 프로그램 전면 실시</li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="order-0 md:order-1 md:w-1/2 md:pl-8">
+                       <div class="hidden md:block"></div>
+                   </div>
+                   <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+                       <div class="bg-gray-700 text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold shadow-md z-10">4</div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+
+   <!-- 관련 프로젝트 섹션 -->
+   <section class="py-16 bg-white">
+       <div class="container mx-auto px-4">
+           <h2 class="text-3xl font-bold text-primary mb-8 text-center">관련 프로젝트</h2>
+           
+           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <a href="science-center.html" class="bg-gray-50 rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                    <div class="h-48 bg-primary flex items-center justify-center">
+                        <i class="fas fa-dumbbell text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">태백 고지대 스포츠 과학센터</h3>
+                        <p class="text-gray-600 mb-4">해발 800-1,400m 고원지대의 국내 유일 고지대 트레이닝 시설</p>
+                        <span class="inline-block text-accent font-medium hover:underline">자세히 보기</span>
+                    </div>
+                </a>
+                
+                <a href="International_Trail_Learning.html" class="bg-gray-50 rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                    <div class="h-48 bg-highlight flex items-center justify-center">
+                        <i class="fas fa-running text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">국제 트레일러닝 네트워크</h3>
+                        <p class="text-gray-600 mb-4">ITRA 인증 국제 수준의 트레일러닝 코스</p>
+                        <span class="inline-block text-accent font-medium hover:underline">자세히 보기</span>
+                    </div>
+                </a>
+                
+                <a href="Specialized_Mountain_Bicycle_District.html" class="bg-gray-50 rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                    <div class="h-48 bg-secondary flex items-center justify-center">
+                        <i class="fas fa-bicycle text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">산악자전거 특화지구</h3>
+                        <p class="text-gray-600 mb-4">다양한 난이도의 MTB 코스와 편의시설</p>
+                        <span class="inline-block text-accent font-medium hover:underline">자세히 보기</span>
+                    </div>
+                </a>
+            </div>
+       </div>
+   </section>
+
+   <!-- 푸터 -->
+   <footer class="bg-gray-900 text-white py-12">
+       <div class="container mx-auto px-4">
+           <div class="flex flex-wrap justify-between mb-8">
+               <div class="w-full md:w-1/3 mb-8 md:mb-0">
+                   <h2 class="text-2xl font-bold mb-4">태백 고원 스포츠 명품도시</h2>
+                   <p class="text-gray-400 mb-4">자연과 스포츠가 공존하는 미래의 태백</p>
+                   <div class="flex space-x-4">
+                       <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                           <i class="fab fa-facebook-f"></i>
+                       </a>
+                       <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                           <i class="fab fa-twitter"></i>
+                       </a>
+                       <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                           <i class="fab fa-instagram"></i>
+                       </a>
+                       <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                           <i class="fab fa-youtube"></i>
+                       </a>
+                   </div>
+               </div>
+               
+               <div class="w-full md:w-1/3 mb-8 md:mb-0">
+                   <h3 class="text-xl font-bold mb-4">주요 링크</h3>
+                   <ul class="space-y-2">
+                       <li><a href="../index.html#vision" class="text-gray-400 hover:text-white transition-colors">비전 소개</a></li>
+                       <li><a href="../index.html#improvement" class="text-gray-400 hover:text-white transition-colors">개선방안</a></li>
+                       <li><a href="../index.html#projects" class="text-gray-400 hover:text-white transition-colors">핵심 프로젝트</a></li>
+                       <li><a href="../index.html#effects" class="text-gray-400 hover:text-white transition-colors">기대효과</a></li>
+                       <li><a href="../benchmark.html" class="text-gray-400 hover:text-white transition-colors">벤치마크 사례</a></li>
+                   </ul>
+               </div>
+               
+               <div class="w-full md:w-1/3">
+                   <h3 class="text-xl font-bold mb-4">연락처</h3>
+                   <ul class="space-y-3">
+                       <li class="flex items-start">
+                           <i class="fas fa-map-marker-alt text-accent mt-1 mr-3"></i>
+                           <span class="text-gray-400">강원특별자치도 태백시 태백로 994 (황지동)</span>
+                       </li>
+                       <li class="flex items-start">
+                           <i class="fas fa-phone text-accent mt-1 mr-3"></i>
+                           <span class="text-gray-400">033-550-2011</span>
+                       </li>
+                       <li class="flex items-start">
+                           <i class="fas fa-envelope text-accent mt-1 mr-3"></i>
+                           <span class="text-gray-400">jwbk8911@korea.kr</span>
+                       </li>
+                   </ul>
+               </div>
+           </div>
+           
+           <div class="pt-8 border-t border-gray-800 text-center text-gray-500">
+               <p>&copy; 2025 태백 고원 스포츠 명품도시. All Rights Reserved.</p>
+           </div>
+       </div>
+   </footer>
+
+   <!-- JavaScript -->
+   <script>
+       // 모바일 메뉴 토글
+       document.getElementById('menu-toggle').addEventListener('click', function() {
+           const mobileMenu = document.getElementById('mobile-menu');
+           mobileMenu.classList.toggle('hidden');
+       });
+
+       // 스크롤 시 헤더 스타일 변경
+       window.addEventListener('scroll', function() {
+           const header = document.querySelector('header');
+           if (window.scrollY > 50) {
+               header.classList.add('bg-white', 'text-gray-900', 'shadow-md');
+               header.classList.remove('bg-primary', 'text-white');
+           } else {
+               header.classList.add('bg-primary', 'text-white');
+               header.classList.remove('bg-white', 'text-gray-900');
+           }
+       });
+
+       // 스크롤 애니메이션
+       function animateOnScroll() {
+           const elements = document.querySelectorAll('.grid > div, .section-header, .max-w-3xl');
+           
+           elements.forEach(element => {
+               const elementPosition = element.getBoundingClientRect().top;
+               const screenPosition = window.innerHeight / 1.3;
+               
+               if(elementPosition < screenPosition) {
+                   element.classList.add('animate-fade-in');
+               }
+           });
+       }
+
+       window.addEventListener('scroll', animateOnScroll);
+       window.addEventListener('load', animateOnScroll);
+   </script>
+
+</body>
+</html>

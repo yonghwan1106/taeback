@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>태백 고지대 스포츠 과학센터 | 태백 고원 스포츠 명품도시</title>
+    <meta name="description" content="태백 고지대 스포츠 과학센터는 해발 800-1,400m의 고원지대에 위치한 국내 유일의 전문 고지대 트레이닝 시설입니다.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2C7873',
+                        secondary: '#5D4037',
+                        accent: '#FF5722',
+                        highlight: '#01579B',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* 추가 애니메이션 */
+        .animate-count {
+            animation: countUp 2s forwards;
+        }
+        
+        @keyframes countUp {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- 헤더 -->
+    <header class="bg-primary text-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-xl font-bold">태백 고원 스포츠 명품도시</a>
+            <nav>
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="../index.html#vision" class="hover:text-accent transition-colors">비전 소개</a></li>
+                    <li><a href="../index.html#improvement" class="hover:text-accent transition-colors">개선방안</a></li>
+                    <li><a href="../index.html#projects" class="hover:text-accent transition-colors">핵심 프로젝트</a></li>
+                    <li><a href="../index.html#effects" class="hover:text-accent transition-colors">기대효과</a></li>
+                    <li><a href="../benchmark.html" class="hover:text-accent transition-colors">벤치마크 사례</a></li>
+                </ul>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 모바일 메뉴 -->
+        <div id="mobile-menu" class="hidden bg-primary shadow-md md:hidden">
+            <ul class="flex flex-col p-4 space-y-3">
+                <li><a href="../index.html#vision" class="block hover:text-accent transition-colors">비전 소개</a></li>
+                <li><a href="../index.html#improvement" class="block hover:text-accent transition-colors">개선방안</a></li>
+                <li><a href="../index.html#projects" class="block hover:text-accent transition-colors">핵심 프로젝트</a></li>
+                <li><a href="../index.html#effects" class="block hover:text-accent transition-colors">기대효과</a></li>
+                <li><a href="../benchmark.html" class="block hover:text-accent transition-colors">벤치마크 사례</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 프로젝트 헤더 섹션 -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-primary to-highlight text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center">
+                <div class="w-full lg:w-2/3 pr-0 lg:pr-12">
+                    <div class="flex items-center mb-6">
+                        <a href="../index.html" class="text-white/70 hover:text-white transition-colors">홈</a>
+                        <i class="fas fa-chevron-right mx-2 text-sm text-white/50"></i>
+                        <a href="../index.html#projects" class="text-white/70 hover:text-white transition-colors">핵심 프로젝트</a>
+                        <i class="fas fa-chevron-right mx-2 text-sm text-white/50"></i>
+                        <span class="text-white">태백 고지대 스포츠 과학센터</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">태백 고지대 스포츠 과학센터</h1>
+                    <p class="text-xl mb-8 animate-fade-in" style="animation-delay: 0.2s;">해발 800-1,400m의 고원지대에 위치한 국내 유일의 전문 고지대 트레이닝 시설로, 국가대표 및 프로팀의 고지대 훈련을 지원하는 동시에 일반인을 위한 건강증진 프로그램을 제공합니다.</p>
+                    
+                    <div class="flex flex-wrap gap-4 animate-fade-in" style="animation-delay: 0.4s;">
+                        <div class="inline-flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>하이원 리조트 인근 부지</span>
+                        </div>
+                        <div class="inline-flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
+                            <i class="fas fa-ruler-combined mr-2"></i>
+                            <span>연면적 15,000㎡</span>
+                        </div>
+                        <div class="inline-flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
+                            <i class="fas fa-coins mr-2"></i>
+                            <span>총 투자비 250억원</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/3 mt-12 lg:mt-0">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center shadow-lg">
+                        <i class="fas fa-dumbbell text-8xl mb-6"></i>
+                        <div class="text-2xl font-bold">2026년 하반기</div>
+                        <div class="text-lg">1차 개관 예정</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 프로젝트 개요 섹션 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-primary mb-8 text-center">프로젝트 개요</h2>
+                
+                <div class="bg-gray-50 rounded-lg shadow-md p-8 mb-12">
+                    <p class="text-lg mb-6">태백 고지대 스포츠 과학센터는 태백시의 가장 큰 지리적 강점인 고원지대 환경을 활용한 전문 스포츠 훈련 시설입니다. 국내에서 유일한 고지대 트레이닝 전문 시설로, 해발 800-1,400m에 위치하여 엘리트 선수들의 고지대 훈련과 일반인의 건강증진을 동시에 지원합니다.</p>
+                    
+                    <p class="text-lg mb-6">이 시설은 고지대 훈련의 과학적 효과를 극대화하기 위한 최첨단 스포츠 과학 장비와 시설을 갖추고 있으며, 전문 인력의 지도 하에 체계적인 훈련 프로그램을 제공합니다. 특히 혈액학적 효과와 심폐기능 개선을 통한 경기력 향상을 목표로 하는 엘리트 선수들에게 최적화된 환경을 제공합니다.</p>
+                    
+                    <p class="text-lg">또한 스포츠 과학에 기반한 일반인 대상 건강증진 프로그램을 운영하여 지역 주민과 관광객들의 건강 향상에도 기여하며, 태백시의 사계절 관광 자원으로서 지역 경제 활성화에 이바지합니다.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-bold text-primary mb-4">목표 및 비전</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>국내 최고의 고지대 스포츠 과학 훈련 메카 조성</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>엘리트 선수 경기력 향상을 위한 과학적 트레이닝 환경 제공</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>스포츠 의학 및 과학 분야 전문 인력 양성</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>지역 주민 및 관광객 건강증진 프로그램 운영</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>사계절 체류형 스포츠 관광 자원으로 활용</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-bold text-primary mb-4">기대 효과</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>국가대표/프로팀 전용 훈련기간: 연간 200일 이상 확보</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>국내외 전문팀 100개 이상, 연인원 5,000명 이상 유치</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>스포츠 의학 및 과학 분야 일자리 100개 이상 창출</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>건강증진 관광 활성화로 연간 방문객 3만명 이상 유치</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>지역 경제 파급효과 연간 300억원 이상 창출</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg shadow-md p-8">
+                    <h3 class="text-xl font-bold text-primary mb-4">고지대 트레이닝의 과학적 효과</h3>
+                    <p class="text-lg mb-6">고지대에서의 트레이닝은 낮은 산소 농도 환경에서 인체가 적응하는 과정에서 다양한 생리학적 변화를 유발합니다. 이러한 변화는 해수면 고도로 돌아왔을 때 운동 수행능력 향상으로 이어집니다.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold text-gray-700 mb-2">혈액학적 효과</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                <li>적혈구 수 및 헤모글로빈 농도 증가(5-10%)</li>
+                                <li>산소 운반 능력 향상</li>
+                                <li>혈액량 및 모세혈관 밀도 증가</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-700 mb-2">심폐기능 개선</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                <li>최대산소섭취량(VO2max) 3-7% 향상</li>
+                                <li>환기 효율성 개선</li>
+                                <li>젖산 역치 상승</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 핵심 시설 섹션 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary mb-8 text-center">핵심 시설</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                    <div class="h-48 bg-primary flex items-center justify-center">
+                        <i class="fas fa-lungs text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">저산소 훈련실</h3>
+                        <p class="text-gray-600 mb-4">해발 2,000m/2,500m/3,000m 시뮬레이션 환경을 제공하는 3종의 저산소 훈련실(각 500㎡ 규모)로, 실제 고도 환경과 동일한 산소 농도를 유지합니다.</p>
+                        <ul class="text-gray-600 list-disc pl-5 space-y-1">
+                            <li>산소 농도 실시간 모니터링 시스템</li>
+                            <li>항온항습 시스템</li>
+                            <li>최대 50명 동시 훈련 가능</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                    <div class="h-48 bg-highlight flex items-center justify-center">
+                        <i class="fas fa-heartbeat text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">생리학 테스트랩</h3>
+                        <p class="text-gray-600 mb-4">최신 장비를 갖춘 종합 검사시설로, 선수들의 신체 기능과 훈련 효과를 과학적으로 측정하고 분석합니다.</p>
+                        <ul class="text-gray-600 list-disc pl-5 space-y-1">
+                            <li>VO2max 테스트 시스템</li>
+                            <li>젖산역치 및 혈액 분석 장비</li>
+                            <li>근력 및 파워 측정 시스템</li>
+                            <li>신체 구성 분석 장비</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                    <div class="h-48 bg-secondary flex items-center justify-center">
+                        <i class="fas fa-running text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">실내 육상 트랙</h3>
+                        <p class="text-gray-600 mb-4">200m 길이의 실내 육상 트랙으로, 기상 조건에 상관없이 안정적인 훈련 환경을 제공합니다.</p>
+                        <ul class="text-gray-600 list-disc pl-5 space-y-1">
+                            <li>스마트 페이싱 시스템</li>
+                            <li>고무 합성 표면</li>
+                            <li>실시간 기록 측정 시스템</li>
+                            <li>영상 분석 카메라 설치</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                    <div class="h-48 bg-accent flex items-center justify-center">
+                        <i class="fas fa-volleyball-ball text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">멀티스포츠 훈련장</h3>
+                        <p class="text-gray-600 mb-4">배구, 농구, 핸드볼 등 다양한 실내 종목 훈련이 가능한 다목적 공간입니다.</p>
+                        <ul class="text-gray-600 list-disc pl-5 space-y-1">
+                            <li>국제 규격 코트 2면</li>
+                            <li>고급 목재 바닥재</li>
+                            <li>팀 전술 분석 시스템</li>
+                            <li>관중석 300석</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                    <div class="h-48 bg-gray-700 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">생체역학 분석실</h3>
+                        <p class="text-gray-600 mb-4">선수들의 동작과 기술을 과학적으로 분석하여 최적의 훈련 방법을 제시합니다.</p>
+                        <ul class="text-gray-600 list-disc pl-5 space-y-1">
+                            <li>3D 동작분석 시스템</li>
+                            <li>지면반력 측정 장비</li>
+                            <li>파워 및 근력 분석 시스템</li>
+                            <li>실시간 피드백 시스템</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                    <div class="h-48 bg-primary flex items-center justify-center">
+                        <i class="fas fa-users text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">건강증진 프로그램 공간</h3>
+                        <p class="text-gray-600 mb-4">일반인을 대상으로 하는 건강증진 프로그램을 운영하는 공간입니다.</p>
+                        <ul class="text-gray-600 list-disc pl-5 space-y-1">
+                            <li>그룹 트레이닝실</li>
+                            <li>맞춤형 운동처방실</li>
+                            <li>건강 상담실</li>
+                            <li>영양 교육실</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 시설 배치도 -->
+            <div class="mt-16 max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold text-primary mb-6 text-center">시설 배치도</h3>
+                <div class="bg-white rounded-lg shadow-md p-8">
+                    <div class="bg-white rounded-lg">
+                        <div class="relative overflow-hidden">
+                            <svg viewBox="0 0 1000 600" class="w-full h-full">
+                                <!-- 배경 --> 
+                                <rect x="0" y="0" width="1000" height="600" fill="#f0f4f8" />
+                                
+                                <!-- 건물 외곽선 -->
+                                <rect x="100" y="50" width="800" height="500" fill="#ffffff" stroke="#2C7873" stroke-width="3" />
+                                
+                                <!-- 저산소 훈련실 -->
+                                <rect x="150" y="100" width="250" height="150" fill="#d1ecf1" stroke="#2C7873" stroke-width="2" />
+                                <text x="275" y="175" font-family="Arial" font-size="16" text-anchor="middle" fill="#333333" font-weight="bold">저산소 훈련실</text>
+                                
+                                <!-- 생리학 테스트랩 -->
+                                <rect x="150" y="300" width="250" height="150" fill="#d1e7dd" stroke="#2C7873" stroke-width="2" />
+                                <text x="275" y="375" font-family="Arial" font-size="16" text-anchor="middle" fill="#333333" font-weight="bold">생리학 테스트랩</text>
+                                
+                                <!-- 실내 육상 트랙 -->
+                                <rect x="450" y="100" width="400" height="150" fill="#f8d7da" stroke="#2C7873" stroke-width="2" />
+                                <ellipse cx="650" cy="175" rx="180" ry="60" fill="none" stroke="#5D4037" stroke-width="2" stroke-dasharray="5,5" />
+                                <text x="650" y="175" font-family="Arial" font-size="16" text-anchor="middle" fill="#333333" font-weight="bold">실내 육상 트랙</text>
+                                
+                                <!-- 멀티스포츠 훈련장 -->
+                                <rect x="450" y="300" width="200" height="150" fill="#fff3cd" stroke="#2C7873" stroke-width="2" />
+                                <rect x="480" y="330" width="140" height="90" fill="none" stroke="#FF5722" stroke-width="2" />
+                                <text x="550" y="375" font-family="Arial" font-size="16" text-anchor="middle" fill="#333333" font-weight="bold">멀티스포츠 훈련장</text>
+                                
+                                <!-- 생체역학 분석실 -->
+                                <rect x="700" y="300" width="150" height="150" fill="#e2e3e5" stroke="#2C7873" stroke-width="2" />
+                                <text x="775" y="375" font-family="Arial" font-size="16" text-anchor="middle" fill="#333333" font-weight="bold">생체역학 분석실</text>
+                                
+                                <!-- 건강증진 프로그램 공간 -->
+                                <rect x="150" y="500" width="700" height="50" fill="#cff4fc" stroke="#2C7873" stroke-width="2" />
+                                <text x="500" y="530" font-family="Arial" font-size="16" text-anchor="middle" fill="#333333" font-weight="bold">건강증진 프로그램 공간</text>
+                                
+                                <!-- 입구 표시 -->
+                                <rect x="450" y="550" width="100" height="25" fill="#6c757d" />
+                                <text x="500" y="567" font-family="Arial" font-size="12" text-anchor="middle" fill="#ffffff">주 출입구</text>
+                                
+                                <!-- 북쪽 표시 -->
+                                <polygon points="50,50 30,80 50,70 70,80" fill="#01579B" />
+                                <text x="50" y="40" font-family="Arial" font-size="16" text-anchor="middle" fill="#01579B" font-weight="bold">N</text>
+                                
+                                 
+                            </svg>
+                        </div>
+                        
+                        <div class="mt-4 text-center text-gray-600">
+                            <p>* 총 면적: 15,000㎡ / 지상 2층 구조</p>
+                            <p>* 각 시설은 전문 장비와 효율적인 동선을 고려하여 배치</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 운영 프로그램 섹션 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary mb-8 text-center">운영 프로그램</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-bold text-primary mb-4">엘리트 선수 프로그램</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-bold text-gray-700 mb-2">고지대 적응 트레이닝</h4>
+                                <p class="text-gray-600">2-4주 단위의 체계적인 고지대 적응 프로그램으로, 저산소 환경에서의 생리적 적응을 최적화합니다.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-700 mb-2">종목별 특화 훈련</h4>
+                                <p class="text-gray-600">육상, 사이클, 수영, 구기종목 등 각 종목의 특성에 맞춘 고지대 훈련 프로그램을 제공합니다.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-700 mb-2">과학 기반 모니터링</h4>
+                                <p class="text-gray-600">훈련 중 실시간 생리학적 모니터링과 정기적인 성과 측정을 통해 훈련 효과를 극대화합니다.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-700 mb-2">영양 및 회복 관리</h4>
+                                <p class="text-gray-600">고지대 환경에 최적화된 영양 프로그램과 회복 관리 서비스를 제공합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-bold text-primary mb-4">일반인 건강증진 프로그램</h3>
+                        <div class="space-y-4">
+                            <div>          
+<h4 class="font-bold text-gray-700 mb-2">고원 건강 체험</h4>
+                <p class="text-gray-600">일반인들이 고지대 환경의 건강상 이점을 체험할 수 있는 1-3일 단기 프로그램입니다.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-gray-700 mb-2">맞춤형 건강관리</h4>
+                <p class="text-gray-600">개인별 건강 상태와 목표에 맞춘 운동 처방과 생활습관 개선 프로그램을 제공합니다.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-gray-700 mb-2">웰니스 리트릿</h4>
+                <p class="text-gray-600">고지대 환경에서의 스트레스 관리, 심신 안정, 영양 개선을 위한 종합 웰니스 프로그램입니다.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-gray-700 mb-2">건강 교육</h4>
+                <p class="text-gray-600">운동과 건강에 관한 강좌와 워크숍을 통해 지역주민과 관광객의 건강 리터러시를 향상시킵니다.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 시즌별 프로그램 -->
+<div class="mt-12">
+    <h3 class="text-2xl font-bold text-primary mb-6 text-center">시즌별 특화 프로그램</h3>
+    
+    <div class="overflow-x-auto">
+        <table class="w-full bg-white rounded-lg shadow-md">
+            <thead>
+                <tr class="bg-primary text-white">
+                    <th class="py-3 px-4 text-left">시즌</th>
+                    <th class="py-3 px-4 text-left">전문 선수 프로그램</th>
+                    <th class="py-3 px-4 text-left">일반인 프로그램</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-b border-gray-200">
+                    <td class="py-3 px-4 font-medium">봄 (3-5월)</td>
+                    <td class="py-3 px-4">
+                        <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                            <li>시즌 준비 강화 트레이닝</li>
+                            <li>유산소 능력 집중 향상 프로그램</li>
+                        </ul>
+                    </td>
+                    <td class="py-3 px-4">
+                        <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                            <li>봄맞이 활력 충전 프로그램</li>
+                            <li>알레르기 개선 고지대 요가</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="border-b border-gray-200">
+                    <td class="py-3 px-4 font-medium">여름 (6-8월)</td>
+                    <td class="py-3 px-4">
+                        <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                            <li>올림픽/세계선수권 대비 집중 훈련</li>
+                            <li>더위 회피 고지대 적응 트레이닝</li>
+                        </ul>
+                    </td>
+                    <td class="py-3 px-4">
+                        <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                            <li>가족단위 건강캠프</li>
+                            <li>청소년 스포츠 아카데미</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="border-b border-gray-200">
+                    <td class="py-3 px-4 font-medium">가을 (9-11월)</td>
+                    <td class="py-3 px-4">
+                        <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                            <li>시즌 마무리 체력 보강</li>
+                            <li>동계 종목 사전 준비 훈련</li>
+                        </ul>
+                    </td>
+                    <td class="py-3 px-4">
+                        <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                            <li>면역력 증진 프로그램</li>
+                            <li>가을 산악 피트니스</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 font-medium">겨울 (12-2월)</td>
+                    <td class="py-3 px-4">
+                        <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                            <li>동계 스포츠 연계 훈련</li>
+                            <li>실내 기초 체력 강화 프로그램</li>
+                        </ul>
+                    </td>
+                    <td class="py-3 px-4">
+                        <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                            <li>스키와 고지대 적응 복합 프로그램</li>
+                            <li>겨울철 건강관리 교실</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+</section>
+
+<!-- 추진 일정 섹션 -->
+<section class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-primary mb-8 text-center">추진 일정</h2>
+    
+    <div class="max-w-4xl mx-auto relative">
+        <!-- 중앙선 -->
+        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-primary transform -translate-x-1/2"></div>
+        
+        <!-- 타임라인 항목 1 -->
+        <div class="relative flex flex-col md:flex-row mb-16 items-center md:items-start">
+            <div class="order-1 md:w-1/2 md:pr-8 md:text-right">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-primary mb-3">2025 하반기</h3>
+                    <p class="text-gray-600 mb-4">기본계획 수립 및 설계 완료</p>
+                    <ul class="space-y-2 md:text-right">
+                        <li>사업 타당성 검토 및 최종 계획 확정</li>
+                        <li>설계 공모 및 선정</li>
+                        <li>국내외 전문가 자문단 구성</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="order-0 md:order-1 md:w-1/2 md:pl-8 mt-8 md:mt-0">
+                <div class="hidden md:block"></div>
+            </div>
+            <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+                <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold shadow-md z-10">1</div>
+            </div>
+        </div>
+        
+        <!-- 타임라인 항목 2 -->
+        <div class="relative flex flex-col md:flex-row mb-16 items-center md:items-start">
+            <div class="order-1 md:order-0 md:w-1/2 md:pr-8 mt-8 md:mt-0">
+                <div class="bg-white p-6 rounded-lg shadow-md md:text-right">
+                    <h3 class="text-xl font-bold text-highlight mb-3">2026 상반기</h3>
+                    <p class="text-gray-600 mb-4">1차 시설 착공 및 운영 조직 구성</p>
+                    <ul class="space-y-2 md:text-right">
+                        <li>저산소 훈련실, 생리학 테스트랩 착공</li>
+                        <li>운영인력 모집 및 교육</li>
+                        <li>국내외 스포츠 기관 협력체계 구축</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="order-0 md:order-1 md:w-1/2 md:pl-8">
+                <div class="hidden md:block"></div>
+            </div>
+            <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+                <div class="bg-highlight text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold shadow-md z-10">2</div>
+            </div>
+        </div>
+        
+        <!-- 타임라인 항목 3 -->
+        <div class="relative flex flex-col md:flex-row mb-16 items-center md:items-start">
+            <div class="order-1 md:w-1/2 md:pr-8 md:text-right">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-secondary mb-3">2026 하반기</h3>
+                    <p class="text-gray-600 mb-4">1차 시설 개관 및 시범 운영</p>
+                    <ul class="space-y-2 md:text-right">
+                        <li>핵심 시설 완공 및 장비 구축</li>
+                        <li>테스트 그룹 초청 시범 운영</li>
+                        <li>프로그램 보완 및 개선</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="order-0 md:order-1 md:w-1/2 md:pl-8 mt-8 md:mt-0">
+                <div class="hidden md:block"></div>
+            </div>
+            <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+                <div class="bg-secondary text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold shadow-md z-10">3</div>
+            </div>
+        </div>
+        
+        <!-- 타임라인 항목 4 -->
+        <div class="relative flex flex-col md:flex-row items-center md:items-start">
+            <div class="order-1 md:order-0 md:w-1/2 md:pr-8 mt-8 md:mt-0">
+                <div class="bg-white p-6 rounded-lg shadow-md md:text-right">
+                    <h3 class="text-xl font-bold text-accent mb-3">2027 상반기</h3>
+                    <p class="text-gray-600 mb-4">전체 시설 완공 및 정식 운영</p>
+                    <ul class="space-y-2 md:text-right">
+                        <li>전체 시설 구축 완료</li>
+                        <li>그랜드 오픈 행사 개최</li>
+                        <li>국가대표팀 정기 훈련 프로그램 시작</li>
+                        <li>일반인 대상 프로그램 전면 시행</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="order-0 md:order-1 md:w-1/2 md:pl-8">
+                <div class="hidden md:block"></div>
+            </div>
+            <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+                <div class="bg-accent text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold shadow-md z-10">4</div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- 재원 조달 계획 섹션 -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-primary mb-8 text-center">투자 및 운영 계획</h2>
+    
+    <div class="max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-bold text-primary mb-4">투자 계획</h3>
+                <div class="space-y-4">
+                    <p class="text-gray-600">총 투자비: 250억원</p>
+                    <div>
+                        <h4 class="font-bold text-gray-700 mb-2">재원 조달 계획</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                            <li>국비(체육진흥기금): 125억원 (50%)</li>
+                            <li>도비: 50억원 (20%)</li>
+                            <li>시비: 50억원 (20%)</li>
+                            <li>민간투자: 25억원 (10%)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-700 mb-2">주요 투자 항목</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                            <li>부지 확보 및 기반시설: 30억원</li>
+                            <li>건축 공사: 150억원</li>
+                            <li>설비 및 장비: 50억원</li>
+                            <li>기타(설계, 감리 등): 20억원</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-bold text-primary mb-4">운영 계획</h3>
+                <div class="space-y-4">
+                    <p class="text-gray-600">연간 운영비: 25억원</p>
+                    <div>
+                        <h4 class="font-bold text-gray-700 mb-2">수입 구조</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                            <li>전문팀 훈련 이용료: 10억원</li>
+                            <li>일반인 프로그램 수입: 8억원</li>
+                            <li>장비 대여 및 부대시설: 3억원</li>
+                            <li>국가대표팀 지원금: 4억원</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-700 mb-2">비용 구조</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                            <li>인건비: 12억원</li>
+                            <li>시설 유지보수: 5억원</li>
+                            <li>장비 관리 및 교체: 3억원</li>
+                            <li>프로그램 운영비: 3억원</li>
+                            <li>일반 관리비: 2억원</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 손익 전망 그래프 -->
+        <div class="bg-gray-50 rounded-lg shadow-md p-8">
+            <h3 class="text-xl font-bold text-primary mb-6 text-center">연도별 손익 전망</h3>
+            <div class="bg-white rounded-lg p-4">
+                <div class="relative" style="height: 400px;">
+                    <svg viewBox="0 0 1000 500" class="w-full h-full">
+                        <!-- 배경 및 좌표축 -->
+                        <rect x="0" y="0" width="1000" height="500" fill="#ffffff" />
+                        
+                        <!-- X있, Y있 -->
+                        <line x1="100" y1="400" x2="900" y2="400" stroke="#333333" stroke-width="2" />
+                        <line x1="100" y1="50" x2="100" y2="400" stroke="#333333" stroke-width="2" />
+                        
+                        <!-- X있 눈금 -->
+                        <line x1="150" y1="395" x2="150" y2="405" stroke="#333333" stroke-width="2" />
+                        <line x1="275" y1="395" x2="275" y2="405" stroke="#333333" stroke-width="2" />
+                        <line x1="400" y1="395" x2="400" y2="405" stroke="#333333" stroke-width="2" />
+                        <line x1="525" y1="395" x2="525" y2="405" stroke="#333333" stroke-width="2" />
+                        <line x1="650" y1="395" x2="650" y2="405" stroke="#333333" stroke-width="2" />
+                        <line x1="775" y1="395" x2="775" y2="405" stroke="#333333" stroke-width="2" />
+                        <line x1="900" y1="395" x2="900" y2="405" stroke="#333333" stroke-width="2" />
+                        
+                        <!-- X있 레이블 -->
+                        <text x="150" y="425" font-family="Arial" font-size="14" text-anchor="middle" fill="#333333">2027년</text>
+                        <text x="275" y="425" font-family="Arial" font-size="14" text-anchor="middle" fill="#333333">2028년</text>
+                        <text x="400" y="425" font-family="Arial" font-size="14" text-anchor="middle" fill="#333333">2029년</text>
+                        <text x="525" y="425" font-family="Arial" font-size="14" text-anchor="middle" fill="#333333">2030년</text>
+                        <text x="650" y="425" font-family="Arial" font-size="14" text-anchor="middle" fill="#333333">2031년</text>
+                        <text x="775" y="425" font-family="Arial" font-size="14" text-anchor="middle" fill="#333333">2032년</text>
+                        <text x="900" y="425" font-family="Arial" font-size="14" text-anchor="middle" fill="#333333">2033년</text>
+                        
+                        <!-- Y있 눈금 -->
+                        <line x1="95" y1="350" x2="105" y2="350" stroke="#333333" stroke-width="2" />
+                        <line x1="95" y1="300" x2="105" y2="300" stroke="#333333" stroke-width="2" />
+                        <line x1="95" y1="250" x2="105" y2="250" stroke="#333333" stroke-width="2" />
+                        <line x1="95" y1="200" x2="105" y2="200" stroke="#333333" stroke-width="2" />
+                        <line x1="95" y1="150" x2="105" y2="150" stroke="#333333" stroke-width="2" />
+                        <line x1="95" y1="100" x2="105" y2="100" stroke="#333333" stroke-width="2" />
+                        <line x1="95" y1="50" x2="105" y2="50" stroke="#333333" stroke-width="2" />
+                        
+                        <!-- Y있 레이블 -->
+                        <text x="85" y="350" font-family="Arial" font-size="14" text-anchor="end" fill="#333333">-5억</text>
+                        <text x="85" y="300" font-family="Arial" font-size="14" text-anchor="end" fill="#333333">0원</text>
+                        <text x="85" y="250" font-family="Arial" font-size="14" text-anchor="end" fill="#333333">5억</text>
+                        <text x="85" y="200" font-family="Arial" font-size="14" text-anchor="end" fill="#333333">10억</text>
+                        <text x="85" y="150" font-family="Arial" font-size="14" text-anchor="end" fill="#333333">15억</text>
+                        <text x="85" y="100" font-family="Arial" font-size="14" text-anchor="end" fill="#333333">20억</text>
+                        <text x="85" y="50" font-family="Arial" font-size="14" text-anchor="end" fill="#333333">25억</text>
+                        
+                        <!-- 수익 선 -->
+                        <polyline points="150,370 275,340 400,300 525,280 650,250 775,220 900,190" 
+                            fill="none" stroke="#2C7873" stroke-width="3" />
+                        
+                        <!-- 비용 선 -->
+                        <polyline points="150,330 275,320 400,300 525,290 650,290 775,290 900,300" 
+                            fill="none" stroke="#5D4037" stroke-width="3" />
+                            
+                        <!-- 순이익 그래프 -->
+                        <rect x="150" y="370" width="20" height="-40" fill="#FF5722" opacity="0.7" />
+                        <rect x="275" y="340" width="20" height="-20" fill="#FF5722" opacity="0.7" />
+                        <rect x="400" y="310" width="20" height="-10" fill="#FF5722" opacity="0.7" />
+                        <rect x="525" y="310" width="20" height="-30" fill="#00796B" opacity="0.7" />
+                        <rect x="650" y="310" width="20" height="-60" fill="#00796B" opacity="0.7" />
+                        <rect x="775" y="300" width="20" height="-80" fill="#00796B" opacity="0.7" />
+                        <rect x="900" y="300" width="20" height="-110" fill="#00796B" opacity="0.7" />
+                        
+                        <!-- 중앙선 (0원) -->
+                        <line x1="100" y1="300" x2="900" y2="300" stroke="#333333" stroke-width="1" stroke-dasharray="5,5" />
+                        
+                        <!-- 범례 -->
+                        <circle cx="730" cy="70" r="6" fill="#2C7873" />
+                        <text x="745" y="75" font-family="Arial" font-size="14" fill="#333333">연간 수익</text>
+                        
+                        <circle cx="730" cy="100" r="6" fill="#5D4037" />
+                        <text x="745" y="105" font-family="Arial" font-size="14" fill="#333333">연간 비용</text>
+                        
+                        <rect x="723" y="124" width="14" height="14" fill="#FF5722" opacity="0.7" />
+                        <text x="745" y="135" font-family="Arial" font-size="14" fill="#333333">적자(순손실)</text>
+                        
+                        <rect x="723" y="149" width="14" height="14" fill="#00796B" opacity="0.7" />
+                        <text x="745" y="160" font-family="Arial" font-size="14" fill="#333333">흑자(순이익)</text>
+                    </svg>
+                </div>
+                <div class="mt-4 text-sm text-gray-700">
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li><span class="font-medium">초기 투자 후 회수기간:</span> 약 3년(시설 정상 운영 기준)</li>
+                        <li><span class="font-medium">수익 구조 특징:</span> 점차 객실 증가와 브랜드 결성에 따른 프리미엄 서비스 확대</li>
+                        <li><span class="font-medium">수익 안정화 요인:</span> 정부/지자체/국가대표팀 장기 계약 확보</li>
+                        <li><span class="font-medium">2030년 이후:</span> 연간 5억원 이상의 안정적 순이익 발생 예상</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-6 text-gray-600">
+                <p class="mb-2">* 2027년 정식 운영 시작 후 3년 이내 수지 균형 달성 전망</p>
+                <p>* 5년 이후 연간 5억원 이상의 수익 창출 예상</p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- 관련 프로젝트 섹션 -->
+<section class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-primary mb-8 text-center">관련 프로젝트</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <a href="International_Trail_Learning.html" class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+            <div class="h-48 bg-highlight flex items-center justify-center">
+                <i class="fas fa-running text-white text-5xl"></i>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-primary mb-3">국제 트레일러닝 네트워크</h3>
+                <p class="text-gray-600 mb-4">ITRA 인증 국제 수준의 트레일러닝 코스</p>
+                <span class="inline-block text-accent font-medium hover:underline">자세히 보기</span>
+            </div>
+        </a>
+        
+        <a href="Specialized_Mountain_Bicycle_District.html" class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+            <div class="h-48 bg-secondary flex items-center justify-center">
+                <i class="fas fa-bicycle text-white text-5xl"></i>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-primary mb-3">산악자전거 특화지구</h3>
+                <p class="text-gray-600 mb-4">다양한 난이도의 MTB 코스와 편의시설</p>
+                <span class="inline-block text-accent font-medium hover:underline">자세히 보기</span>
+            </div>
+        </a>
+        
+        <a href="Coal_Mine_Adventure_Course.html" class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+            <div class="h-48 bg-gray-700 flex items-center justify-center">
+                <i class="fas fa-hard-hat text-white text-5xl"></i>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-primary mb-3">탄광 어드벤처 코스</h3>
+                <p class="text-gray-600 mb-4">폐광 시설을 활용한 독특한 스포츠 체험 공간</p>
+                <span class="inline-block text-accent font-medium hover:underline">자세히 보기</span>
+            </div>
+        </a>
+    </div>
+</div>
+</section>
+
+<!-- 푸터 -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="container mx-auto px-4">
+    <div class="flex flex-wrap justify-between mb-8">
+        <div class="w-full md:w-1/3 mb-8 md:mb-0">
+            <h2 class="text-2xl font-bold mb-4">태백 고원 스포츠 명품도시</h2>
+            <p class="text-gray-400 mb-4">자연과 스포츠가 공존하는 미래의 태백</p>
+            <div class="flex space-x-4">
+                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="w-full md:w-1/3 mb-8 md:mb-0">
+            <h3 class="text-xl font-bold mb-4">주요 링크</h3>
+            <ul class="space-y-2">
+                <li><a href="../index.html#vision" class="text-gray-400 hover:text-white transition-colors">비전 소개</a></li>
+                <li><a href="../index.html#improvement" class="text-gray-400 hover:text-white transition-colors">개선방안</a></li>
+                <li><a href="../index.html#projects" class="text-gray-400 hover:text-white transition-colors">핵심 프로젝트</a></li>
+                <li><a href="../index.html#effects" class="text-gray-400 hover:text-white transition-colors">기대효과</a></li>
+                <li><a href="../benchmark.html" class="text-gray-400 hover:text-white transition-colors">벤치마크 사례</a></li>
+            </ul>
+        </div>
+        
+        <div class="w-full md:w-1/3">
+            <h3 class="text-xl font-bold mb-4">연락처</h3>
+            <ul class="space-y-3">
+                <li class="flex items-start">
+                    <i class="fas fa-map-marker-alt text-accent mt-1 mr-3"></i>
+                    <span class="text-gray-400">강원특별자치도 태백시 태백로 994 (황지동)</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-phone text-accent mt-1 mr-3"></i>
+                    <span class="text-gray-400">033-550-2011</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-envelope text-accent mt-1 mr-3"></i>
+                    <span class="text-gray-400">jwbk8911@korea.kr</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="pt-8 border-t border-gray-800 text-center text-gray-500">
+        <p>&copy; 2025 태백 고원 스포츠 명품도시. All Rights Reserved.</p>
+    </div>
+</div>
+</footer>
+
+<!-- JavaScript -->
+<script>
+// 모바일 메뉴 토글
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenu.classList.toggle('hidden');
+});
+
+// 스크롤 시 헤더 스타일 변경
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+        header.classList.add('bg-white', 'text-gray-900', 'shadow-md');
+        header.classList.remove('bg-primary', 'text-white');
+    } else {
+        header.classList.add('bg-primary', 'text-white');
+        header.classList.remove('bg-white', 'text-gray-900');
+    }
+});
+
+// 스크롤 애니메이션
+function animateOnScroll() {
+    const elements = document.querySelectorAll('.grid > div, .section-header, .max-w-3xl');
+    
+    elements.forEach(element => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+        
+        if(elementPosition < screenPosition) {
+            element.classList.add('animate-fade-in');
+        }
+    });
+}
+
+window.addEventListener('scroll', animateOnScroll);
+window.addEventListener('load', animateOnScroll);
+</script>
+
+</body>
+</html>
